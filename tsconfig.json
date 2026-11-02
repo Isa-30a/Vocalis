@@ -18,6 +18,10 @@
         "name": "next"
       }
     ],
+    "daisyui": {
+      "themes": ["cupcake", "pastel", "light"],
+      "darkTheme": "cupcake"
+    },
     "paths": {
       "@/*": ["./*"]
     }
