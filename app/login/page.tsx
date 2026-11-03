@@ -5,7 +5,6 @@ import {
   ArrowLeft,
   AudioLines,
   ListMusic,
-  ShieldCheck,
   Users,
 } from "lucide-react";
 import { GoogleMark } from "@/components/auth/GoogleMark";
@@ -71,7 +70,7 @@ export default function LoginPage() {
         className="pointer-events-none absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-accent/10 blur-3xl"
       />
 
-      <div className="relative grid w-full max-w-md overflow-hidden rounded-[2rem] border border-base-300 bg-base-100 shadow-2xl shadow-secondary/10 lg:max-w-5xl lg:grid-cols-[1.04fr_1fr]">
+      <div className="relative grid w-full max-w-md overflow-hidden rounded-4xl border border-base-300 bg-base-100 shadow-2xl shadow-secondary/10 lg:max-w-5xl lg:grid-cols-[1.04fr_1fr]">
         <section
           aria-labelledby="login-brand-title"
           className="relative hidden overflow-hidden bg-neutral p-8 text-neutral-content sm:p-10 lg:flex lg:flex-col"
@@ -137,7 +136,7 @@ export default function LoginPage() {
                 return (
                   <li
                     key={feature.label}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-neutral-content/75"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/6 px-3 py-1.5 text-xs font-medium text-neutral-content/75"
                   >
                     <Icon
                       className="h-3.5 w-3.5 text-primary"
@@ -209,18 +208,6 @@ export default function LoginPage() {
             <Suspense fallback={<LoginFormFallback />}>
               <LoginForm />
             </Suspense>
-
-            <div className="mt-8 flex items-start gap-2.5 rounded-2xl bg-base-200/60 p-3.5 text-xs leading-relaxed text-base-content/55">
-              <ShieldCheck
-                className="mt-0.5 h-4 w-4 shrink-0 text-primary"
-                strokeWidth={1.75}
-                aria-hidden="true"
-              />
-              <p>
-                Usamos Google solo para verificar tu identidad. Nunca
-                publicamos nada en tu nombre.
-              </p>
-            </div>
 
             <div className="mt-8 flex flex-col gap-4 border-t border-base-300/70 pt-6 sm:flex-row sm:items-center sm:justify-between">
               <Link
