@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 async function DashboardContent() {
   const session = await auth();
   if (!session) {
-    redirect("/api/auth/signin?callbackUrl=/dashboard");
+    redirect("/login?callbackUrl=/dashboard");
   }
   return <h1>Welcome, {session.user?.name}</h1>;
 }

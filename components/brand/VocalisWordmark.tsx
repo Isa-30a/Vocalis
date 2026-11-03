@@ -1,13 +1,17 @@
 type VocalisWordmarkProps = {
   className?: string;
+  tone?: "neutral" | "inverse";
 };
 
 export function VocalisWordmark({
   className = "",
+  tone = "neutral",
 }: VocalisWordmarkProps) {
   return (
     <span
-      className={`font-display font-bold tracking-tight text-neutral ${className}`}
+      className={`font-display font-bold tracking-tight ${
+        tone === "inverse" ? "text-neutral-content" : "text-neutral"
+      } ${className}`}
       aria-hidden="true"
     >
       Vocal

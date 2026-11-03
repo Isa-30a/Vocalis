@@ -8,6 +8,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
     }),
   ],
+  pages: {
+    signIn: "/login",
+  },
   callbacks: {
     async session({ session, token }) {
       // Attach user ID to session for use in your app
