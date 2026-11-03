@@ -12,6 +12,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     signIn: "/login",
   },
   callbacks: {
+    authorized({ auth }) {
+      return !!auth;
+    },
     async session({ session, token }) {
       // Attach user ID to session for use in your app
       if (token.sub) {
