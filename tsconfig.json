@@ -20,9 +20,8 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@features/*": ["./src/features/*"],
-      "@ui/*": ["./src/components/ui/*"],
-      "@lib/*": ["./src/lib/*"]
+      "@features/*": ["./features/*"],
+      "@ui/*": ["./components/ui/*"]
     }
   },
   "include": [

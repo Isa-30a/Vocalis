@@ -1,5 +1,5 @@
 import Image from "next/image";
-import vocalisMark from "@/src/assets/vocalist-logo.svg";
+import vocalisMark from "@/assets/vocalist-logo.svg";
 
 type VocalisMarkProps = {
   className?: string;

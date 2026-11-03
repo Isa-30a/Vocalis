@@ -1,4 +1,4 @@
-import { AppHeader } from "@/src/components/layout/AppHeader";
+import { AppHeader } from "@/components/layout/AppHeader";
 import { TeamCard } from "@features/equipo/components/TeamCard";
 import { ServiceHero } from "@features/inicio/components/ServiceHero";
 import { Welcome } from "@features/inicio/components/Welcome";

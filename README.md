@@ -37,9 +37,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```text
 app/                 Routes, layout, metadata and global theme
-src/components/      Brand, layout and shared UI components
-src/features/        Home, songs, team and setlist code
-src/assets/          Vocalis brand assets
+components/          Brand, layout and shared UI components
+features/            Home, songs, team and setlist code
+assets/              Vocalis brand assets
 ```
 
-Brand colors and typography live in `app/globals.css`. Home data is mocked in `src/features/*/data`.
+Brand colors and typography live in `app/globals.css`. Home data is mocked in `features/*/data`.

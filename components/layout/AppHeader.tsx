@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Member } from "@features/equipo/types";
-import { VocalisMark } from "@/src/components/brand/VocalisMark";
-import { VocalisWordmark } from "@/src/components/brand/VocalisWordmark";
+import { VocalisMark } from "@/components/brand/VocalisMark";
+import { VocalisWordmark } from "@/components/brand/VocalisWordmark";
 
 export function AppHeader({ user }: { user: Member }) {
   return (
