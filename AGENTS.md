@@ -7,3 +7,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Workflow
+
+- Never push directly to `main`. Create a feature branch and open a pull request; changes reach `main` only through a PR.
+
+## Code style
+
+- Avoid duplication. Extract repeated markup into a component and repeated logic into a helper.
