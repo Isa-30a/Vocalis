@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="Vocalis">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E8F1FB"/>
+    </linearGradient>
+    <linearGradient id="navy" gradientUnits="userSpaceOnUse" x1="280" y1="270" x2="590" y2="780">
+      <stop offset="0" stop-color="#0A3174"/>
+      <stop offset="1" stop-color="#04225A"/>
+    </linearGradient>
+    <linearGradient id="wave" gradientUnits="userSpaceOnUse" x1="548" y1="0" x2="700" y2="0">
+      <stop offset="0" stop-color="#0B4F96"/>
+      <stop offset="1" stop-color="#0391DD"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="228" fill="url(#bg)"/>
+  <g transform="translate(512 512) scale(0.78) translate(-737 -527)">
+    <g fill="url(#navy)">
+      <path d="M586 777 C560 785 525 775 500 745 C470 705 452 640 449 570 C446 510 448 470 451 440 C453 410 455 395 458 375 C465 320 485 280 523 271 C540 268 553 277 552 293 C548 315 540 350 535 392 C530 420 526 440 525 458 C520 520 518 570 520 600 C522 650 535 700 560 740 C570 757 580 768 587 773 Z"/>
+      <path d="M300 520 C282 520 273 505 280 492 C290 475 320 458 360 442 C400 427 430 418 455 410 L535 393 C600 381 680 372 720 380 C745 385 752 395 746 405 C742 412 735 418 720 421 C650 436 580 447 525 458 L450 479 C400 493 340 512 300 520 Z"/>
+    </g>
+    <path fill="url(#wave)" d="M548 690 C590 680 640 620 690 575 C720 552 750 538 780 546 C820 556 850 590 880 630 C910 672 940 702 990 708 C1050 712 1100 680 1140 648 L1146 646 C1148 654 1142 660 1138 668 C1100 715 1040 750 975 760 C920 765 880 745 840 700 C815 670 800 640 785 622 C770 607 750 606 735 618 C700 645 660 700 625 733 C605 750 590 752 575 740 C560 728 550 710 548 690 Z"/>
+    <g fill="#0391DD">
+      <ellipse cx="1018" cy="627" rx="62" ry="42" transform="rotate(-25 1018 627)"/>
+      <path d="M1060 592 L1068 480 C1070 450 1076 434 1090 432 C1150 447 1200 492 1196 545 C1194 578 1175 605 1155 618 L1153 612 C1165 585 1163 550 1148 530 C1135 513 1112 505 1093 505 L1077 615 Z"/>
+    </g>
+  </g>
+</svg>
