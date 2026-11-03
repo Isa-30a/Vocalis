@@ -11,7 +11,7 @@ import { formatTotalMinutes } from "@features/setlists/utils";
 
 async function DashboardContent() {
   const session = await auth();
-  if (!session) {
+  if (!session?.user) {
     redirect("/login?callbackUrl=/dashboard");
   }
 
@@ -19,7 +19,7 @@ async function DashboardContent() {
 
   return (
     <div className="min-h-screen">
-      <AppHeader user={homeData.user} />
+      <AppHeader user={session.user} />
 
       <main
         id="contenido"

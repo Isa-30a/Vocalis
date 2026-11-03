@@ -5,7 +5,14 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
-  partialPrefetching: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.googleusercontent.com",
+      },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {
