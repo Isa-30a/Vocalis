@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 import { LogOut } from "lucide-react";
 import { signOutUser } from "@/components/auth/actions";
+import { useDismissableDetails } from "@/hooks/use-dismissable-details";
 import {
   getDisplayName,
   getInitials,
@@ -11,44 +11,9 @@ import {
 } from "@/lib/user";
 
 export function UserMenu({ user }: { user: UserProfile }) {
-  const detailsRef = useRef<HTMLDetailsElement>(null);
+  const detailsRef = useDismissableDetails();
   const displayName = getDisplayName(user);
   const initials = getInitials(user);
-
-  useEffect(() => {
-    function closeOnOutsidePointer(event: PointerEvent) {
-      const details = detailsRef.current;
-
-      if (
-        !details?.open ||
-        !(event.target instanceof Node) ||
-        details.contains(event.target)
-      ) {
-        return;
-      }
-
-      details.open = false;
-    }
-
-    function closeOnEscape(event: KeyboardEvent) {
-      const details = detailsRef.current;
-
-      if (event.key !== "Escape" || !details?.open) {
-        return;
-      }
-
-      details.open = false;
-      details.querySelector<HTMLElement>("summary")?.focus();
-    }
-
-    document.addEventListener("pointerdown", closeOnOutsidePointer);
-    document.addEventListener("keydown", closeOnEscape);
-
-    return () => {
-      document.removeEventListener("pointerdown", closeOnOutsidePointer);
-      document.removeEventListener("keydown", closeOnEscape);
-    };
-  }, []);
 
   return (
     <details ref={detailsRef} className="dropdown dropdown-end">
