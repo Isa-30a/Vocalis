@@ -8,6 +8,7 @@ export type UserProfile = UserIdentity & {
 };
 
 const FALLBACK_NAME = "Invitado";
+const INITIAL_SEPARATORS = /[\s._'\u2018\u2019-]+/;
 
 function getEmailLocalPart(email?: string | null): string | null {
   const value = email?.trim();
@@ -46,8 +47,7 @@ export function getInitials(user: UserIdentity): string {
     return "?";
   }
 
-  // Split on apostrophes too, so "O'Connor" yields "OC".
-  const parts = source.split(/[\s._'\u2018\u2019-]+/).filter(Boolean);
+  const parts = source.split(INITIAL_SEPARATORS).filter(Boolean);
 
   if (parts.length === 0) {
     return "?";

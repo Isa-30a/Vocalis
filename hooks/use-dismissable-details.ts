@@ -2,10 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-/**
- * Closes a native <details> element when the user clicks outside it or presses
- * Escape. Escape returns focus to the summary so keyboard users keep context.
- */
 export function useDismissableDetails() {
   const detailsRef = useRef<HTMLDetailsElement>(null);
 

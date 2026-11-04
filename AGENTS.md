@@ -15,3 +15,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Code style
 
 - Avoid duplication. Extract repeated markup into a component and repeated logic into a helper.
+- Prefer self-explanatory code. Only comment non-obvious decisions or constraints; do not restate what the code already says.
