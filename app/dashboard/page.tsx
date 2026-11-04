@@ -5,7 +5,7 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { TeamCard } from "@features/equipo/components/TeamCard";
 import { ServiceHero } from "@features/inicio/components/ServiceHero";
 import { Welcome } from "@features/inicio/components/Welcome";
-import { homeData } from "@features/inicio/data/home";
+import { getHomeData } from "@features/inicio/data/home";
 import { SetlistCard } from "@features/setlists/components/SetlistCard";
 import { formatTotalMinutes } from "@features/setlists/utils";
 import { getFirstName } from "@/lib/user";
@@ -17,6 +17,7 @@ async function DashboardContent() {
   }
 
   const firstName = getFirstName(session.user);
+  const homeData = await getHomeData();
   const totalMinutes = formatTotalMinutes(homeData.totalDurationSeconds);
 
   return (
@@ -31,6 +32,7 @@ async function DashboardContent() {
 
         <ServiceHero
           director={homeData.director}
+          serviceLabel={homeData.setlist?.serviceLabel ?? "Próximo servicio"}
           itemCount={homeData.setlistItems.length}
           totalMinutes={totalMinutes}
         />

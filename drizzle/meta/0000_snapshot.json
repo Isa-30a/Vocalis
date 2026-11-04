@@ -1,0 +1,660 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "e5bf06d8-b6d4-4268-850d-c923e9ee280a",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "members": {
+      "name": "members",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "initials": {
+          "name": "initials",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "role_label": {
+          "name": "role_label",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "tone": {
+          "name": "tone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'neutral'"
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(unixepoch() * 1000)"
+        }
+      },
+      "indexes": {
+        "members_email_idx": {
+          "name": "members_email_idx",
+          "columns": [
+            "email"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "members_role_check": {
+          "name": "members_role_check",
+          "value": "\"members\".\"role\" in ('director', 'musico', 'corista')"
+        },
+        "members_tone_check": {
+          "name": "members_tone_check",
+          "value": "\"members\".\"tone\" in ('primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning')"
+        }
+      }
+    },
+    "setlist_items": {
+      "name": "setlist_items",
+      "columns": {
+        "setlist_id": {
+          "name": "setlist_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "position": {
+          "name": "position",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "song_id": {
+          "name": "song_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "director_id": {
+          "name": "director_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "key_note": {
+          "name": "key_note",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "key_symbol": {
+          "name": "key_symbol",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "key_mode": {
+          "name": "key_mode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'major'"
+        }
+      },
+      "indexes": {
+        "setlist_items_song_idx": {
+          "name": "setlist_items_song_idx",
+          "columns": [
+            "song_id"
+          ],
+          "isUnique": false
+        },
+        "setlist_items_director_idx": {
+          "name": "setlist_items_director_idx",
+          "columns": [
+            "director_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "setlist_items_setlist_id_setlists_id_fk": {
+          "name": "setlist_items_setlist_id_setlists_id_fk",
+          "tableFrom": "setlist_items",
+          "tableTo": "setlists",
+          "columnsFrom": [
+            "setlist_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "setlist_items_song_id_songs_id_fk": {
+          "name": "setlist_items_song_id_songs_id_fk",
+          "tableFrom": "setlist_items",
+          "tableTo": "songs",
+          "columnsFrom": [
+            "song_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "setlist_items_director_id_members_id_fk": {
+          "name": "setlist_items_director_id_members_id_fk",
+          "tableFrom": "setlist_items",
+          "tableTo": "members",
+          "columnsFrom": [
+            "director_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "setlist_items_setlist_id_position_pk": {
+          "columns": [
+            "setlist_id",
+            "position"
+          ],
+          "name": "setlist_items_setlist_id_position_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "setlist_items_mode_check": {
+          "name": "setlist_items_mode_check",
+          "value": "\"setlist_items\".\"key_mode\" in ('major', 'minor')"
+        }
+      }
+    },
+    "setlists": {
+      "name": "setlists",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "service_label": {
+          "name": "service_label",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "director_id": {
+          "name": "director_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "service_at": {
+          "name": "service_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(unixepoch() * 1000)"
+        }
+      },
+      "indexes": {
+        "setlists_director_idx": {
+          "name": "setlists_director_idx",
+          "columns": [
+            "director_id"
+          ],
+          "isUnique": false
+        },
+        "setlists_service_at_idx": {
+          "name": "setlists_service_at_idx",
+          "columns": [
+            "service_at"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "setlists_director_id_members_id_fk": {
+          "name": "setlists_director_id_members_id_fk",
+          "tableFrom": "setlists",
+          "tableTo": "members",
+          "columnsFrom": [
+            "director_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "song_audio": {
+      "name": "song_audio",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(lower(hex(randomblob(16))))"
+        },
+        "song_id": {
+          "name": "song_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "kind": {
+          "name": "kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "label": {
+          "name": "label",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "storage_key": {
+          "name": "storage_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "mime_type": {
+          "name": "mime_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "size_bytes": {
+          "name": "size_bytes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "duration_seconds": {
+          "name": "duration_seconds",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "uploaded_by": {
+          "name": "uploaded_by",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(unixepoch() * 1000)"
+        }
+      },
+      "indexes": {
+        "song_audio_storage_key_idx": {
+          "name": "song_audio_storage_key_idx",
+          "columns": [
+            "storage_key"
+          ],
+          "isUnique": true
+        },
+        "song_audio_song_idx": {
+          "name": "song_audio_song_idx",
+          "columns": [
+            "song_id"
+          ],
+          "isUnique": false
+        },
+        "song_audio_uploaded_by_idx": {
+          "name": "song_audio_uploaded_by_idx",
+          "columns": [
+            "uploaded_by"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "song_audio_song_id_songs_id_fk": {
+          "name": "song_audio_song_id_songs_id_fk",
+          "tableFrom": "song_audio",
+          "tableTo": "songs",
+          "columnsFrom": [
+            "song_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "song_audio_uploaded_by_members_id_fk": {
+          "name": "song_audio_uploaded_by_members_id_fk",
+          "tableFrom": "song_audio",
+          "tableTo": "members",
+          "columnsFrom": [
+            "uploaded_by"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "song_audio_kind_check": {
+          "name": "song_audio_kind_check",
+          "value": "\"song_audio\".\"kind\" in ('home', 'original', 'reference')"
+        }
+      }
+    },
+    "song_director_keys": {
+      "name": "song_director_keys",
+      "columns": {
+        "song_id": {
+          "name": "song_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "director_id": {
+          "name": "director_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "key_note": {
+          "name": "key_note",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "key_symbol": {
+          "name": "key_symbol",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "key_mode": {
+          "name": "key_mode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'major'"
+        },
+        "context": {
+          "name": "context",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "song_director_keys_director_idx": {
+          "name": "song_director_keys_director_idx",
+          "columns": [
+            "director_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "song_director_keys_song_id_songs_id_fk": {
+          "name": "song_director_keys_song_id_songs_id_fk",
+          "tableFrom": "song_director_keys",
+          "tableTo": "songs",
+          "columnsFrom": [
+            "song_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "song_director_keys_director_id_members_id_fk": {
+          "name": "song_director_keys_director_id_members_id_fk",
+          "tableFrom": "song_director_keys",
+          "tableTo": "members",
+          "columnsFrom": [
+            "director_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "song_director_keys_song_id_director_id_pk": {
+          "columns": [
+            "song_id",
+            "director_id"
+          ],
+          "name": "song_director_keys_song_id_director_id_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "song_director_keys_mode_check": {
+          "name": "song_director_keys_mode_check",
+          "value": "\"song_director_keys\".\"key_mode\" in ('major', 'minor')"
+        },
+        "song_director_keys_context_check": {
+          "name": "song_director_keys_context_check",
+          "value": "\"song_director_keys\".\"context\" is null or \"song_director_keys\".\"context\" in ('acústico', 'banda')"
+        }
+      }
+    },
+    "songs": {
+      "name": "songs",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "artist": {
+          "name": "artist",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'Desconocido'"
+        },
+        "original_key_note": {
+          "name": "original_key_note",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "original_key_symbol": {
+          "name": "original_key_symbol",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "original_key_mode": {
+          "name": "original_key_mode",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "duration_seconds": {
+          "name": "duration_seconds",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "has_home_version": {
+          "name": "has_home_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(unixepoch() * 1000)"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(unixepoch() * 1000)"
+        }
+      },
+      "indexes": {
+        "songs_title_idx": {
+          "name": "songs_title_idx",
+          "columns": [
+            "title"
+          ],
+          "isUnique": false
+        },
+        "songs_artist_idx": {
+          "name": "songs_artist_idx",
+          "columns": [
+            "artist"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "songs_key_mode_check": {
+          "name": "songs_key_mode_check",
+          "value": "\"songs\".\"original_key_mode\" is null or \"songs\".\"original_key_mode\" in ('major', 'minor')"
+        }
+      }
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

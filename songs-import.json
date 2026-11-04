@@ -3,22 +3,34 @@
     {
       "id": "que-se-llene-tu-casa",
       "title": "Que se llene tu casa",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "artist": "Ingrid Rosario",
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -26,21 +38,33 @@
       "id": "hossana",
       "title": "Hossana",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -54,48 +78,78 @@
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
-        { "directorId": "Alvaro Olier", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "tu-haras",
       "title": "Tú harás",
       "artist": "Marcos Witt",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
     {
       "id": "creo-en-ti",
       "title": "Creo en ti",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "artist": "Julio Melgar",
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -103,17 +157,26 @@
       "id": "dios-de-lo-imposible",
       "title": "Dios de lo imposible",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -121,13 +184,19 @@
       "id": "dios-esta-aqui",
       "title": "Dios está aquí",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
@@ -135,43 +204,67 @@
       "id": "el-senor-ha-prometido",
       "title": "El Señor ha prometido",
       "artist": "Desconocido",
-      "originalKey": { "note": "Si", "symbol": "B" },
+      "originalKey": {
+        "note": "Si",
+        "symbol": "B"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Si", "symbol": "B" }
+          "key": {
+            "note": "Si",
+            "symbol": "B"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Mary",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
     {
       "id": "el-es-el-rey",
       "title": "El es el Rey",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "artist": "Danilo Montero",
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
@@ -179,17 +272,26 @@
       "id": "a-jesus",
       "title": "A Jesús",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -197,41 +299,59 @@
       "id": "a-tus-pies",
       "title": "A tus pies",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
     {
       "id": "perfume-a-tus-pies",
       "title": "Perfume a tus pies",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "artist": "En Espíritu y en Verdad",
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
     {
       "id": "majestuoso-poderoso",
       "title": "Majestuoso poderoso",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "artist": "Marco Barrientos",
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
@@ -239,13 +359,19 @@
       "id": "cristo-te-exalto",
       "title": "Cristo te exalto",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -253,39 +379,60 @@
       "id": "exaltate",
       "title": "Exáltate",
       "artist": "Marcos Witt",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Alvaro Olier",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
     {
       "id": "exaltado-sea-tu-nombre",
       "title": "Exaltado sea tu nombre",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "artist": "Esperanza de Vida",
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
@@ -293,17 +440,26 @@
       "id": "hermoso-nombre",
       "title": "Hermoso nombre",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Do#", "symbol": "C#" }
+          "key": {
+            "note": "Do#",
+            "symbol": "C#"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -311,17 +467,26 @@
       "id": "eterno-dios",
       "title": "Eterno Dios",
       "artist": "Marcos Barrientos",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
@@ -329,35 +494,53 @@
       "id": "lo-unico-que-quiero",
       "title": "Lo único que quiero",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Alvaro Olier",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
     {
       "id": "te-doy-gloria",
       "title": "Te doy gloria",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "artist": "En Espíritu y en Verdad",
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -365,21 +548,33 @@
       "id": "gracia-sublime",
       "title": "Gracia sublime",
       "artist": "Desconocido",
-      "originalKey": { "note": "Si", "symbol": "B" },
+      "originalKey": {
+        "note": "Si",
+        "symbol": "B"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Si", "symbol": "B" }
+          "key": {
+            "note": "Si",
+            "symbol": "B"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Si", "symbol": "B" }
+          "key": {
+            "note": "Si",
+            "symbol": "B"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -387,21 +582,33 @@
       "id": "exaltado-estas",
       "title": "Exaltado estas",
       "artist": "Miel San Marcos",
-      "originalKey": { "note": "Do#", "symbol": "C#" },
+      "originalKey": {
+        "note": "Do#",
+        "symbol": "C#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
@@ -409,13 +616,19 @@
       "id": "en-la-cruz",
       "title": "En la cruz",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do#", "symbol": "C#" },
+      "originalKey": {
+        "note": "Do#",
+        "symbol": "C#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Do#", "symbol": "C#" }
+          "key": {
+            "note": "Do#",
+            "symbol": "C#"
+          }
         }
       ]
     },
@@ -423,13 +636,19 @@
       "id": "porque-tu-eres-bueno",
       "title": "Porque tú eres bueno",
       "artist": "Desconocido",
-      "originalKey": { "note": "Si", "symbol": "B" },
+      "originalKey": {
+        "note": "Si",
+        "symbol": "B"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Si", "symbol": "B" }
+          "key": {
+            "note": "Si",
+            "symbol": "B"
+          }
         }
       ]
     },
@@ -437,17 +656,26 @@
       "id": "vivo-enamorado-de-ti",
       "title": "Vivo enamorado de ti",
       "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -455,15 +683,27 @@
       "id": "que-no-se-acabe",
       "title": "Que no se acabe",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
-        { "directorId": "Mary", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
@@ -476,7 +716,10 @@
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
@@ -484,17 +727,26 @@
       "id": "cuan-grande-es-dios",
       "title": "Cuan grande es Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -502,13 +754,19 @@
       "id": "cuan-grande-es-el",
       "title": "Cuan grande es El",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -516,36 +774,60 @@
       "id": "te-dare-lo-mejor",
       "title": "Te daré lo mejor",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
-        { "directorId": "Mary", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "te-alabare",
       "title": "Te alabare",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "artist": "Danilo Montero",
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
@@ -553,13 +835,19 @@
       "id": "la-bondad-de-dios",
       "title": "La bondad de Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -567,17 +855,26 @@
       "id": "poderoso-dios",
       "title": "Poderoso Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
@@ -585,39 +882,66 @@
       "id": "quien-nos-podra-separar-del-amor-de-dios",
       "title": "Quien nos podrá separar del amor de Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "renuevame",
       "title": "Renuévame",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "artist": "Marcos Witt",
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "morada-de-dios",
       "title": "Morada de Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Alvaro Olier",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -629,44 +953,74 @@
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "senor-eres-fiel",
       "title": "Señor eres fiel",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Alvaro Olier",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
     {
       "id": "dios-el-mas-grande",
       "title": "Dios el mas grande",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "artist": "Dante Gebel",
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Alvaro Olier",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
-        { "directorId": "Mary", "key": { "note": "Re", "symbol": "D" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
+        }
       ]
     },
     {
@@ -677,40 +1031,64 @@
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "dad",
       "title": "Dad",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Alvaro Olier",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
     {
       "id": "en-el-estoy-seguro",
       "title": "En el estoy seguro",
-      "artist": "Desconocido",
+      "artist": "Jesús Adrián Romero",
       "originalKey": null,
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
@@ -721,50 +1099,86 @@
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "solo-hay-uno",
       "title": "Solo hay uno",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
-        { "directorId": "Mary", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "tu-pueblo-dice-gracias",
       "title": "Tu pueblo dice gracias",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "artist": "Jacobo Ramos",
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
-        { "directorId": "Mary", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "yo-quiero-mas-de-ti",
       "title": "Yo quiero más de ti",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "artist": "Jaime Murrell",
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -772,32 +1186,53 @@
       "id": "ensename-a-sembrar",
       "title": "Enséñame a sembrar",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Mary",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
-        { "directorId": "Alvaro Olier", "key": { "note": "Mi", "symbol": "E" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
+        }
       ]
     },
     {
       "id": "amigo-en-lugares-altos",
       "title": "Amigo en lugares Altos",
       "artist": "Desconocido",
-      "originalKey": { "note": "La#", "symbol": "A#" },
+      "originalKey": {
+        "note": "La#",
+        "symbol": "A#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "La#", "symbol": "A#" }
+          "key": {
+            "note": "La#",
+            "symbol": "A#"
+          }
         }
       ]
     },
@@ -805,25 +1240,40 @@
       "id": "el-volvera",
       "title": "El volverá",
       "artist": "Marcos Witt",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "Fa", "symbol": "F" }
+          "key": {
+            "note": "Fa",
+            "symbol": "F"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -831,13 +1281,19 @@
       "id": "solo-a-ti",
       "title": "Solo a Ti",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -845,17 +1301,26 @@
       "id": "es-tu-sangre",
       "title": "Es tu sangre",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -863,32 +1328,53 @@
       "id": "hijo-de-dios",
       "title": "Hijo de Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
-      "durationSeconds": 0,
-      "hasHomeVersion": false,
-      "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Re", "symbol": "D" } }
-      ]
-    },
-    {
-      "id": "en-tu-presencia",
-      "title": "En tu presencia",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
+        }
+      ]
+    },
+    {
+      "id": "en-tu-presencia",
+      "title": "En tu presencia",
+      "artist": "José Ferrer",
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
+      "durationSeconds": 0,
+      "hasHomeVersion": false,
+      "directorKeys": [
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -896,39 +1382,66 @@
       "id": "tu-eres-mi-todo",
       "title": "Tú eres mi todo",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "adorar-es-todo-en-mi-vida",
       "title": "Adorar es todo en mi vida",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
-      "durationSeconds": 0,
-      "hasHomeVersion": false,
-      "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Do", "symbol": "C" } }
-      ]
-    },
-    {
-      "id": "alaba-a-dios",
-      "title": "Alaba a Dios",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "alaba-a-dios",
+      "title": "Alaba a Dios",
+      "artist": "Danny Berrios",
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
+      "durationSeconds": 0,
+      "hasHomeVersion": false,
+      "directorKeys": [
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Fa", "symbol": "F" }
+          "key": {
+            "note": "Fa",
+            "symbol": "F"
+          }
         }
       ]
     },
@@ -940,18 +1453,30 @@
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "a-ti",
       "title": "A ti",
-      "artist": "Desconocido",
+      "artist": "Marcos Witt",
       "originalKey": null,
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
@@ -962,20 +1487,32 @@
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "quiero-levantar-mis-manos",
       "title": "Quiero levantar mis manos",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Si", "symbol": "B" },
+      "artist": "Marcos Witt",
+      "originalKey": {
+        "note": "Si",
+        "symbol": "B"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Si", "symbol": "B" }
+          "key": {
+            "note": "Si",
+            "symbol": "B"
+          }
         }
       ]
     },
@@ -983,35 +1520,53 @@
       "id": "eres-tu",
       "title": "Eres tu",
       "artist": "Danilo Montero",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
     {
       "id": "mi-socorro-viene-de-ti",
       "title": "Mi socorro viene de ti",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "artist": "Josué Del Cid",
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -1019,13 +1574,19 @@
       "id": "solo-puedo-adorar",
       "title": "Solo puedo adorar",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
@@ -1033,70 +1594,106 @@
       "id": "vengo-adorarte",
       "title": "Vengo adorarte",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
     {
       "id": "nada-es-imposible",
       "title": "Nada es imposible",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "artist": "Marco Barrientos",
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
-        { "directorId": "Alvaro Olier", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "el-dios-que-adoramos",
       "title": "El Dios que adoramos",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "artist": "Gracia Soberana Música",
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
     {
       "id": "dios-imparable",
       "title": "Dios imparable",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La#", "symbol": "A#" },
+      "artist": "Marcos Witt",
+      "originalKey": {
+        "note": "La#",
+        "symbol": "A#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La#", "symbol": "A#" }
+          "key": {
+            "note": "La#",
+            "symbol": "A#"
+          }
         }
       ]
     },
     {
       "id": "fiel",
       "title": "Fiel",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La#", "symbol": "A#" },
+      "artist": "Majo y Dan",
+      "originalKey": {
+        "note": "La#",
+        "symbol": "A#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La#", "symbol": "A#" }
+          "key": {
+            "note": "La#",
+            "symbol": "A#"
+          }
         }
       ]
     },
@@ -1104,13 +1701,19 @@
       "id": "enamorame",
       "title": "Enamorame",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
@@ -1118,13 +1721,19 @@
       "id": "yo-se-quien-soy-yo",
       "title": "Yo sé quién soy yo",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -1132,13 +1741,19 @@
       "id": "digno-es-el-senor",
       "title": "Digno es el Señor",
       "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -1146,13 +1761,19 @@
       "id": "al-q-esta-sentado-en-el-trono",
       "title": "Al q está sentado en el trono",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -1160,45 +1781,66 @@
       "id": "gracias",
       "title": "Gracias",
       "artist": "Marcos Witt",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
     {
       "id": "has-aumentado",
       "title": "Has Aumentado",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "artist": "Danilo Montero",
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
     {
       "id": "has-cambiado-mi-lamento-en-baile",
       "title": "Has cambiado mi lamento en baile",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "artist": "Juan Carlos Alvarado",
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1206,13 +1848,19 @@
       "id": "bendito-sea-jehova-la-roca",
       "title": "Bendito sea Jehová la roca",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1220,13 +1868,19 @@
       "id": "yo-soy-testigo-del-poder-de-dios",
       "title": "Yo soy testigo del poder de Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1234,13 +1888,19 @@
       "id": "yo-no-se-a-lo-q-tu-has-venido",
       "title": "Yo no sé a lo q tú has venido",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1248,13 +1908,19 @@
       "id": "el-cristo-q-se-alaba-aqui",
       "title": "El Cristo q se alaba aquí",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1262,13 +1928,19 @@
       "id": "dios-quiero-mas-de-ti",
       "title": "Dios quiero más de ti",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1276,13 +1948,19 @@
       "id": "jesus-eres-mi-buen-pastor",
       "title": "Jesus eres mi buen pastor",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1290,13 +1968,19 @@
       "id": "al-alto-y-sublime",
       "title": "Al alto y sublime",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1304,38 +1988,59 @@
       "id": "soberano-dios",
       "title": "Soberano Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "queremos-darte-gloria",
       "title": "Queremos darte gloria",
       "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
     {
       "id": "increible",
       "title": "Increíble",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "artist": "Miel San Marcos",
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
@@ -1343,13 +2048,19 @@
       "id": "milagroso",
       "title": "Milagroso",
       "artist": "Desconocido",
-      "originalKey": { "note": "Fa", "symbol": "F" },
+      "originalKey": {
+        "note": "Fa",
+        "symbol": "F"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Fa", "symbol": "F" }
+          "key": {
+            "note": "Fa",
+            "symbol": "F"
+          }
         }
       ]
     },
@@ -1357,13 +2068,19 @@
       "id": "mi-corazon-entona-la-cancion",
       "title": "Mi corazón entona la canción",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1371,17 +2088,26 @@
       "id": "al-estar-aqui",
       "title": "Al estar aqui",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Alvaro Olier",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1389,152 +2115,257 @@
       "id": "cristo-no-esta-muerto",
       "title": "Cristo no esta muerto",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "la-tengo",
       "title": "La tengo",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "mira-lo-que-hizo-dios",
       "title": "Mira lo que hizo Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "eres-senor-vencedor",
       "title": "Eres señor vencedor",
       "artist": "Desconocido",
-      "originalKey": { "note": "Fa#", "symbol": "F#" },
+      "originalKey": {
+        "note": "Fa#",
+        "symbol": "F#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Alvaro Olier",
-          "key": { "note": "Fa#", "symbol": "F#" }
+          "key": {
+            "note": "Fa#",
+            "symbol": "F#"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
     {
       "id": "tu-mirada",
       "title": "Tu mirada",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "artist": "Marcos Witt",
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "hermoso-eres",
       "title": "Hermoso eres",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "artist": "Marcos Witt",
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "cambiare-mi-tristeza",
       "title": "Cambiare mi tristeza",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "dios-incomparable",
       "title": "Dios incomparable",
-      "artist": "Desconocido",
+      "artist": "Marco Barrientos",
       "originalKey": null,
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Alvaro Olier", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Alvaro Olier",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "grande-eres-tu",
       "title": "Grande eres tú",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Mi", "symbol": "E" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
+        }
       ]
     },
     {
       "id": "derrama-de-tu-fuego",
       "title": "Derrama de tu fuego",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "el-es-mi-paz",
       "title": "El es mi paz",
       "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
     {
       "id": "de-gloria-en-gloria",
       "title": "De gloria en gloria",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La#", "symbol": "A#" },
+      "artist": "Marcos Witt",
+      "originalKey": {
+        "note": "La#",
+        "symbol": "A#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "La#", "symbol": "A#" }
+          "key": {
+            "note": "La#",
+            "symbol": "A#"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
         {
           "directorId": "Alvaro Olier",
-          "key": { "note": "La#", "symbol": "A#" }
+          "key": {
+            "note": "La#",
+            "symbol": "A#"
+          }
         }
       ]
     },
@@ -1542,27 +2373,39 @@
       "id": "precioso-jesus",
       "title": "Precioso Jesús",
       "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
     {
       "id": "tu-nombre-levantare",
       "title": "Tu nombre levantare",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "artist": "Danilo Montero",
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -1570,13 +2413,19 @@
       "id": "vine-a-adorarte",
       "title": "Vine a adorarte",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
@@ -1584,42 +2433,66 @@
       "id": "amigo-de-dios",
       "title": "Amigo de Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "La#", "symbol": "A#" },
+      "originalKey": {
+        "note": "La#",
+        "symbol": "A#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "La#", "symbol": "A#" }
+          "key": {
+            "note": "La#",
+            "symbol": "A#"
+          }
         }
       ]
     },
     {
       "id": "mas-el-dios-de-toda-gracia",
       "title": "Mas el Dios de toda gracia",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "artist": "Marcos Witt",
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
-        { "directorId": "Mary", "key": { "note": "Mi", "symbol": "E" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
+        }
       ]
     },
     {
       "id": "yo-te-busco",
       "title": "Yo te busco",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "artist": "Marcos Witt",
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -1627,11 +2500,20 @@
       "id": "bendito-jesus-jesus",
       "title": "Bendito Jesús Jesús",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Mi", "symbol": "E" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
+        }
       ]
     },
     {
@@ -1642,24 +2524,39 @@
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Do", "symbol": "C" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        }
       ]
     },
     {
       "id": "con-mis-manos-levantadas",
       "title": "Con mis manos levantadas",
       "artist": "Danilo Montero",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
@@ -1667,28 +2564,46 @@
       "id": "mi-dios",
       "title": "Mi Dios",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "La", "symbol": "A" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
+        }
       ]
     },
     {
       "id": "al-que-me-cine",
       "title": "Al que me ciñe",
       "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
+      "originalKey": {
+        "note": "Do",
+        "symbol": "C"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
@@ -1696,31 +2611,46 @@
       "id": "en-ti",
       "title": "En ti",
       "artist": "Marcos Barrientos",
-      "originalKey": { "note": "Re", "symbol": "D" },
+      "originalKey": {
+        "note": "Re",
+        "symbol": "D"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         }
       ]
     },
     {
       "id": "bendita-la-cruz",
       "title": "Bendita la cruz",
-      "artist": "Desconocido",
-      "originalKey": { "note": "La#", "symbol": "A#" },
+      "artist": "Joseph Espinoza",
+      "originalKey": {
+        "note": "La#",
+        "symbol": "A#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La#", "symbol": "A#" }
+          "key": {
+            "note": "La#",
+            "symbol": "A#"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -1728,13 +2658,19 @@
       "id": "al-q-es-digno",
       "title": "Al q es digno",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
@@ -1742,61 +2678,114 @@
       "id": "que-dulces-es-estar-en-tu-presencia",
       "title": "Que dulces es estar en tu presencia",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
         {
           "directorId": "Mary",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
     {
       "id": "mi-vida-eres-tu",
       "title": "Mi vida eres tú",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "artist": "Coalo Zamorano",
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Re", "symbol": "D" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
+        }
       ]
     },
     {
       "id": "el-gozo-que-el-senor-a-puesto-en-mi",
       "title": "El gozo que el Señor a puesto en mi",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Fa", "symbol": "F" },
+      "artist": "Juan Carlos Alvarado",
+      "originalKey": {
+        "note": "Fa",
+        "symbol": "F"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
-        { "directorId": "Mary", "key": { "note": "Fa", "symbol": "F" } }
+        {
+          "directorId": "Mary",
+          "key": {
+            "note": "Fa",
+            "symbol": "F"
+          }
+        },
+        {
+          "directorId": "Orlando Paredes",
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
+        },
+        {
+          "directorId": "Angelina Paredes",
+          "key": {
+            "note": "Fa",
+            "symbol": "F"
+          }
+        }
       ]
     },
     {
       "id": "eres-mi-amigo-fiel",
       "title": "Eres mi amigo fiel",
       "artist": "Desconocido",
-      "originalKey": { "note": "Mi", "symbol": "E" },
+      "originalKey": {
+        "note": "Mi",
+        "symbol": "E"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Mary",
-          "key": { "note": "Mi", "symbol": "E" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         },
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Re", "symbol": "D" }
+          "key": {
+            "note": "Re",
+            "symbol": "D"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -1804,35 +2793,26 @@
       "id": "aqui-estoy",
       "title": "Aquí estoy",
       "artist": "Jaime Murrell",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Mi", "symbol": "E" }
-        }
-      ]
-    },
-    {
-      "id": "el-gozo",
-      "title": "El Gozo",
-      "artist": "Desconocido",
-      "originalKey": { "note": "Do", "symbol": "C" },
-      "durationSeconds": 0,
-      "hasHomeVersion": false,
-      "directorKeys": [
-        {
-          "directorId": "Orlando Paredes",
-          "key": { "note": "Do", "symbol": "C" }
-        },
-        {
-          "directorId": "Angelina Paredes",
-          "key": { "note": "Fa", "symbol": "F" }
+          "key": {
+            "note": "Mi",
+            "symbol": "E"
+          }
         }
       ]
     },
@@ -1840,13 +2820,19 @@
       "id": "adorar",
       "title": "Adorar",
       "artist": "Desconocido",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -1854,13 +2840,19 @@
       "id": "alaba",
       "title": "Alaba",
       "artist": "Desconocido",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
@@ -1868,35 +2860,50 @@
       "id": "viene-otra-vez",
       "title": "Viene otra vez",
       "artist": "Christine D'Clario",
-      "originalKey": { "note": "Fa", "symbol": "F" },
+      "originalKey": {
+        "note": "Fa",
+        "symbol": "F"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Fa", "symbol": "F" }
+          "key": {
+            "note": "Fa",
+            "symbol": "F"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Fa", "symbol": "F" }
+          "key": {
+            "note": "Fa",
+            "symbol": "F"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Fa", "symbol": "F" }
+          "key": {
+            "note": "Fa",
+            "symbol": "F"
+          }
         }
       ]
     },
     {
       "id": "el-deseado",
       "title": "El Deseado",
-      "artist": "Desconocido",
+      "artist": "Gadiel Espinoza",
       "originalKey": null,
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Do", "symbol": "C" }
+          "key": {
+            "note": "Do",
+            "symbol": "C"
+          }
         }
       ]
     },
@@ -1904,21 +2911,33 @@
       "id": "mi-primer-amor",
       "title": "Mi primer amor",
       "artist": "Marcos Witt",
-      "originalKey": { "note": "La", "symbol": "A" },
+      "originalKey": {
+        "note": "La",
+        "symbol": "A"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "La", "symbol": "A" }
+          "key": {
+            "note": "La",
+            "symbol": "A"
+          }
         }
       ]
     },
@@ -1926,17 +2945,26 @@
       "id": "dias-de-elias",
       "title": "Días de Elías",
       "artist": "Paul Wilbur",
-      "originalKey": { "note": "Re#", "symbol": "D#" },
+      "originalKey": {
+        "note": "Re#",
+        "symbol": "D#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Orlando Paredes",
-          "key": { "note": "Re#", "symbol": "D#" }
+          "key": {
+            "note": "Re#",
+            "symbol": "D#"
+          }
         },
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re#", "symbol": "D#" }
+          "key": {
+            "note": "Re#",
+            "symbol": "D#"
+          }
         }
       ]
     },
@@ -1944,17 +2972,26 @@
       "id": "mas-q-palabras",
       "title": "Más q palabras",
       "artist": "Marcos Witt",
-      "originalKey": { "note": "Sol", "symbol": "G" },
+      "originalKey": {
+        "note": "Sol",
+        "symbol": "G"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         },
         {
           "directorId": "Mary",
-          "key": { "note": "Sol", "symbol": "G" }
+          "key": {
+            "note": "Sol",
+            "symbol": "G"
+          }
         }
       ]
     },
@@ -1962,44 +2999,46 @@
       "id": "diste-a-tu-hijo",
       "title": "Diste a tu hijo",
       "artist": "Salomón De La Rosa",
-      "originalKey": { "note": "Re#", "symbol": "D#" },
+      "originalKey": {
+        "note": "Re#",
+        "symbol": "D#"
+      },
       "durationSeconds": 0,
       "hasHomeVersion": false,
       "directorKeys": [
         {
           "directorId": "Angelina Paredes",
-          "key": { "note": "Re#", "symbol": "D#" }
+          "key": {
+            "note": "Re#",
+            "symbol": "D#"
+          }
         },
         {
           "directorId": "Eyleen Barroso",
-          "key": { "note": "Si", "symbol": "B" }
+          "key": {
+            "note": "Si",
+            "symbol": "B"
+          }
         }
       ]
     }
   ],
   "warnings": [
-    "song[0] \"Que se llene tu casa\": artist missing in export, stored as \"Desconocido\"",
     "song[1] \"Hossana\": artist missing in export, stored as \"Desconocido\"",
     "song[2] \"Vamos a cantar\": no key for director \"Orlando Paredes\", stored as \"Do\"",
     "song[2] \"Vamos a cantar\": no key for director \"Alvaro Olier\", stored as \"Do\"",
     "song[2] \"Vamos a cantar\": artist missing in export, stored as \"Desconocido\"",
     "song[2] \"Vamos a cantar\": key missing in export, originalKey null",
-    "song[4] \"Creo en ti\": artist missing in export, stored as \"Desconocido\"",
     "song[4] \"Creo en ti\": minor key \"Re-\" stored as Re; mode lost",
     "song[5] \"Dios de lo imposible\": artist missing in export, stored as \"Desconocido\"",
     "song[6] \"Dios está aquí\": artist missing in export, stored as \"Desconocido\"",
     "song[7] \"El Señor ha prometido\": artist missing in export, stored as \"Desconocido\"",
-    "song[8] \"El es el Rey\": artist missing in export, stored as \"Desconocido\"",
     "song[9] \"A Jesús\": artist missing in export, stored as \"Desconocido\"",
     "song[10] \"A tus pies\": artist missing in export, stored as \"Desconocido\"",
-    "song[11] \"Perfume a tus pies\": artist missing in export, stored as \"Desconocido\"",
-    "song[12] \"Majestuoso poderoso\": artist missing in export, stored as \"Desconocido\"",
     "song[13] \"Cristo te exalto\": artist missing in export, stored as \"Desconocido\"",
-    "song[15] \"Exaltado sea tu nombre\": artist missing in export, stored as \"Desconocido\"",
     "song[16] \"Hermoso nombre\": artist missing in export, stored as \"Desconocido\"",
     "song[18] \"Lo único que quiero\": artist missing in export, stored as \"Desconocido\"",
     "song[18] \"Lo único que quiero\": merged title variants (Lo único)",
-    "song[19] \"Te doy gloria\": artist missing in export, stored as \"Desconocido\"",
     "song[20] \"Gracia sublime\": artist missing in export, stored as \"Desconocido\"",
     "song[22] \"En la cruz\": artist missing in export, stored as \"Desconocido\"",
     "song[23] \"Porque tú eres bueno\": artist missing in export, stored as \"Desconocido\"",
@@ -2013,17 +3052,14 @@
     "song[27] \"Cuan grande es Dios\": artist missing in export, stored as \"Desconocido\"",
     "song[28] \"Cuan grande es El\": artist missing in export, stored as \"Desconocido\"",
     "song[29] \"Te daré lo mejor\": artist missing in export, stored as \"Desconocido\"",
-    "song[30] \"Te alabare\": artist missing in export, stored as \"Desconocido\"",
     "song[31] \"La bondad de Dios\": artist missing in export, stored as \"Desconocido\"",
     "song[32] \"Poderoso Dios\": artist missing in export, stored as \"Desconocido\"",
     "song[33] \"Quien nos podrá separar del amor de Dios\": artist missing in export, stored as \"Desconocido\"",
-    "song[34] \"Renuévame\": artist missing in export, stored as \"Desconocido\"",
     "song[35] \"Morada de Dios\": artist missing in export, stored as \"Desconocido\"",
     "song[36] \"Palabras de Vida\": no key for director \"Alvaro Olier\", stored as \"Do\"",
     "song[36] \"Palabras de Vida\": artist missing in export, stored as \"Desconocido\"",
     "song[36] \"Palabras de Vida\": key missing in export, originalKey null",
     "song[37] \"Señor eres fiel\": artist missing in export, stored as \"Desconocido\"",
-    "song[38] \"Dios el mas grande\": artist missing in export, stored as \"Desconocido\"",
     "song[39] \"Majestad\": no key for director \"Alvaro Olier\", stored as \"Do\"",
     "song[39] \"Majestad\": artist missing in export, stored as \"Desconocido\"",
     "song[39] \"Majestad\": key missing in export, originalKey null",
@@ -2031,7 +3067,6 @@
     "song[40] \"Dad\": multiple keys \"C- D\" given, stored first key \"Do\"",
     "song[40] \"Dad\": multiple keys \"F / G\" given, stored first key \"Fa\"",
     "song[41] \"En el estoy seguro\": no key for director \"Alvaro Olier\", stored as \"Do\"",
-    "song[41] \"En el estoy seguro\": artist missing in export, stored as \"Desconocido\"",
     "song[41] \"En el estoy seguro\": key missing in export, originalKey null",
     "song[42] \"Con mi Dios\": no key for director \"Alvaro Olier\", stored as \"Do\"",
     "song[42] \"Con mi Dios\": artist missing in export, stored as \"Desconocido\"",
@@ -2039,8 +3074,6 @@
     "song[42] \"Con mi Dios\": unparseable key \"Mm\"",
     "song[43] \"Solo hay uno\": artist missing in export, stored as \"Desconocido\"",
     "song[43] \"Solo hay uno\": minor key \"Am\" stored as La; mode lost",
-    "song[44] \"Tu pueblo dice gracias\": artist missing in export, stored as \"Desconocido\"",
-    "song[45] \"Yo quiero más de ti\": artist missing in export, stored as \"Desconocido\"",
     "song[46] \"Enséñame a sembrar\": artist missing in export, stored as \"Desconocido\"",
     "song[46] \"Enséñame a sembrar\": unparseable key \"Sb\"",
     "song[47] \"Amigo en lugares Altos\": artist missing in export, stored as \"Desconocido\"",
@@ -2048,39 +3081,28 @@
     "song[50] \"Es tu sangre\": artist missing in export, stored as \"Desconocido\"",
     "song[50] \"Es tu sangre\": merged title variants (Es tu sangre que me limpia)",
     "song[51] \"Hijo de Dios\": artist missing in export, stored as \"Desconocido\"",
-    "song[52] \"En tu presencia\": artist missing in export, stored as \"Desconocido\"",
     "song[52] \"En tu presencia\": multiple keys \"G | A\" given, stored first key \"Sol\"",
     "song[53] \"Tú eres mi todo\": artist missing in export, stored as \"Desconocido\"",
     "song[53] \"Tú eres mi todo\": merged title variants (Eres mi todo)",
     "song[54] \"Adorar es todo en mi vida\": artist missing in export, stored as \"Desconocido\"",
-    "song[55] \"Alaba a Dios\": artist missing in export, stored as \"Desconocido\"",
     "song[56] \"Amor de Dios\": no key for director \"Alvaro Olier\", stored as \"Do\"",
     "song[56] \"Amor de Dios\": key missing in export, originalKey null",
     "song[57] \"A ti\": no key for director \"Alvaro Olier\", stored as \"Do\"",
-    "song[57] \"A ti\": artist missing in export, stored as \"Desconocido\"",
     "song[57] \"A ti\": key missing in export, originalKey null",
     "song[58] \"Trae tu Ofrenda\": no key for director \"Alvaro Olier\", stored as \"Do\"",
     "song[58] \"Trae tu Ofrenda\": artist missing in export, stored as \"Desconocido\"",
     "song[58] \"Trae tu Ofrenda\": key missing in export, originalKey null",
-    "song[59] \"Quiero levantar mis manos\": artist missing in export, stored as \"Desconocido\"",
     "song[60] \"Eres tu\": minor key \"Gm\" stored as Sol; mode lost",
     "song[60] \"Eres tu\": minor key \"Dm\" stored as Re; mode lost",
-    "song[61] \"Mi socorro viene de ti\": artist missing in export, stored as \"Desconocido\"",
     "song[61] \"Mi socorro viene de ti\": multiple keys \"G-A\" given, stored first key \"Sol\"",
     "song[61] \"Mi socorro viene de ti\": multiple keys \"D-E\" given, stored first key \"Re\"",
     "song[62] \"Solo puedo adorar\": artist missing in export, stored as \"Desconocido\"",
     "song[63] \"Vengo adorarte\": artist missing in export, stored as \"Desconocido\"",
-    "song[64] \"Nada es imposible\": artist missing in export, stored as \"Desconocido\"",
-    "song[65] \"El Dios que adoramos\": artist missing in export, stored as \"Desconocido\"",
-    "song[66] \"Dios imparable\": artist missing in export, stored as \"Desconocido\"",
-    "song[67] \"Fiel\": artist missing in export, stored as \"Desconocido\"",
     "song[68] \"Enamorame\": artist missing in export, stored as \"Desconocido\"",
     "song[69] \"Yo sé quién soy yo\": artist missing in export, stored as \"Desconocido\"",
     "song[70] \"Digno es el Señor\": artist missing in export, stored as \"Desconocido\"",
     "song[71] \"Al q está sentado en el trono\": artist missing in export, stored as \"Desconocido\"",
-    "song[73] \"Has Aumentado\": artist missing in export, stored as \"Desconocido\"",
     "song[73] \"Has Aumentado\": minor key \"Am\" stored as La; mode lost",
-    "song[74] \"Has cambiado mi lamento en baile\": artist missing in export, stored as \"Desconocido\"",
     "song[75] \"Bendito sea Jehová la roca\": artist missing in export, stored as \"Desconocido\"",
     "song[76] \"Yo soy testigo del poder de Dios\": artist missing in export, stored as \"Desconocido\"",
     "song[77] \"Yo no sé a lo q tú has venido\": artist missing in export, stored as \"Desconocido\"",
@@ -2090,7 +3112,6 @@
     "song[81] \"Al alto y sublime\": artist missing in export, stored as \"Desconocido\"",
     "song[82] \"Soberano Dios\": artist missing in export, stored as \"Desconocido\"",
     "song[83] \"Queremos darte gloria\": artist missing in export, stored as \"Desconocido\"",
-    "song[84] \"Increíble\": artist missing in export, stored as \"Desconocido\"",
     "song[85] \"Milagroso\": artist missing in export, stored as \"Desconocido\"",
     "song[86] \"Mi corazón entona la canción\": artist missing in export, stored as \"Desconocido\"",
     "song[87] \"Al estar aqui\": artist missing in export, stored as \"Desconocido\"",
@@ -2101,51 +3122,34 @@
     "song[91] \"Eres señor vencedor\": minor key \"F#m\" stored as Fa#; mode lost",
     "song[91] \"Eres señor vencedor\": minor key \"Gm\" stored as Sol; mode lost",
     "song[91] \"Eres señor vencedor\": unparseable key \"Mm\"",
-    "song[92] \"Tu mirada\": artist missing in export, stored as \"Desconocido\"",
-    "song[93] \"Hermoso eres\": artist missing in export, stored as \"Desconocido\"",
     "song[94] \"Cambiare mi tristeza\": artist missing in export, stored as \"Desconocido\"",
     "song[95] \"Dios incomparable\": no key for director \"Alvaro Olier\", stored as \"Do\"",
-    "song[95] \"Dios incomparable\": artist missing in export, stored as \"Desconocido\"",
     "song[95] \"Dios incomparable\": key missing in export, originalKey null",
     "song[95] \"Dios incomparable\": unparseable key \"S\"",
     "song[96] \"Grande eres tú\": artist missing in export, stored as \"Desconocido\"",
     "song[96] \"Grande eres tú\": multiple keys \"Mi - Fa\" given, stored first key \"Mi\"",
     "song[97] \"Derrama de tu fuego\": artist missing in export, stored as \"Desconocido\"",
     "song[98] \"El es mi paz\": artist missing in export, stored as \"Desconocido\"",
-    "song[99] \"De gloria en gloria\": artist missing in export, stored as \"Desconocido\"",
     "song[99] \"De gloria en gloria\": unparseable key \"M\"",
     "song[100] \"Precioso Jesús\": artist missing in export, stored as \"Desconocido\"",
-    "song[101] \"Tu nombre levantare\": artist missing in export, stored as \"Desconocido\"",
     "song[102] \"Vine a adorarte\": artist missing in export, stored as \"Desconocido\"",
     "song[102] \"Vine a adorarte\": modulation \"Si +\" ignored, stored \"Do\"",
     "song[103] \"Amigo de Dios\": artist missing in export, stored as \"Desconocido\"",
     "song[103] \"Amigo de Dios\": multiple keys \"SI B - DO\" given, stored first key \"La#\"",
-    "song[104] \"Mas el Dios de toda gracia\": artist missing in export, stored as \"Desconocido\"",
-    "song[105] \"Yo te busco\": artist missing in export, stored as \"Desconocido\"",
     "song[106] \"Bendito Jesús Jesús\": artist missing in export, stored as \"Desconocido\"",
     "song[107] \"Tú eres el Dios que Adoramos\": no key for director \"Mary\", stored as \"Do\"",
     "song[107] \"Tú eres el Dios que Adoramos\": artist missing in export, stored as \"Desconocido\"",
     "song[107] \"Tú eres el Dios que Adoramos\": key missing in export, originalKey null",
     "song[109] \"Mi Dios\": artist missing in export, stored as \"Desconocido\"",
     "song[110] \"Al que me ciñe\": artist missing in export, stored as \"Desconocido\"",
-    "song[112] \"Bendita la cruz\": artist missing in export, stored as \"Desconocido\"",
     "song[113] \"Al q es digno\": artist missing in export, stored as \"Desconocido\"",
     "song[114] \"Que dulces es estar en tu presencia\": artist missing in export, stored as \"Desconocido\"",
-    "song[115] \"Mi vida eres tú\": artist missing in export, stored as \"Desconocido\"",
-    "song[116] \"El gozo que el Señor a puesto en mi\": artist missing in export, stored as \"Desconocido\"",
     "song[117] \"Eres mi amigo fiel\": artist missing in export, stored as \"Desconocido\"",
-    "song[119] \"El Gozo\": artist missing in export, stored as \"Desconocido\"",
-    "song[119] \"El Gozo\": multiple keys \"C|D\" given, stored first key \"Do\"",
-    "song[120] \"Adorar\": artist missing in export, stored as \"Desconocido\"",
-    "song[121] \"Alaba\": artist missing in export, stored as \"Desconocido\"",
-    "song[123] \"El Deseado\": no key for director \"Orlando Paredes\", stored as \"Do\"",
-    "song[123] \"El Deseado\": artist missing in export, stored as \"Desconocido\"",
-    "song[123] \"El Deseado\": key missing in export, originalKey null",
-    "song[125] \"Días de Elías\": multiple keys \"Mib - Mi\" given, stored first key \"Re#\"",
-    "director \"Orlandito N.V\" not in roster, stored as \"Orlando Paredes\"",
-    "director \"Pasta Angie\" not in roster, stored as \"Angelina Paredes\"",
-    "director \"Eyleen Barroso N.V\" not in roster, stored as \"Eyleen Barroso\"",
-    "director \"Pastora Mary\" not in roster, stored as \"Mary\"",
-    "director \"Alvaro Olier\" not in roster, stored as \"Alvaro Olier\""
+    "song[119] \"Adorar\": artist missing in export, stored as \"Desconocido\"",
+    "song[120] \"Alaba\": artist missing in export, stored as \"Desconocido\"",
+    "song[122] \"El Deseado\": no key for director \"Orlando Paredes\", stored as \"Do\"",
+    "song[122] \"El Deseado\": key missing in export, originalKey null",
+    "song[124] \"Días de Elías\": multiple keys \"Mib - Mi\" given, stored first key \"Re#\"",
+    "song[116] \"El gozo que el Señor a puesto en mi\": merged title variant \"El Gozo\" (same song by Juan Carlos Alvarado)"
   ]
 }

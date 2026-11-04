@@ -2,13 +2,15 @@ import type { Member } from "@features/equipo/types";
 import { ArrowRight } from "lucide-react";
 
 type ServiceHeroProps = {
-  director: Member;
+  director: Member | null;
+  serviceLabel: string;
   itemCount: number;
   totalMinutes: string;
 };
 
 export function ServiceHero({
   director,
+  serviceLabel,
   itemCount,
   totalMinutes,
 }: ServiceHeroProps) {
@@ -44,10 +46,11 @@ export function ServiceHero({
           id="service-title"
           className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl"
         >
-          Domingo, 10:00
+          {serviceLabel}
         </h2>
         <p className="mt-2 text-sm text-neutral-content/70">
-          Dirige {director.name} · {itemCount} canciones · {totalMinutes}
+          Dirige {director?.name ?? "tu equipo"} · {itemCount} canciones ·{" "}
+          {totalMinutes}
         </p>
         <a href="#setlist" className="btn btn-primary mt-5 rounded-full px-5">
           Ver setlist
