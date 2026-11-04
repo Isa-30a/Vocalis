@@ -8,6 +8,7 @@ import { Welcome } from "@features/inicio/components/Welcome";
 import { homeData } from "@features/inicio/data/home";
 import { SetlistCard } from "@features/setlists/components/SetlistCard";
 import { formatTotalMinutes } from "@features/setlists/utils";
+import { getFirstName } from "@/lib/user";
 
 async function DashboardContent() {
   const session = await auth();
@@ -15,6 +16,7 @@ async function DashboardContent() {
     redirect("/login?callbackUrl=/dashboard");
   }
 
+  const firstName = getFirstName(session.user);
   const totalMinutes = formatTotalMinutes(homeData.totalDurationSeconds);
 
   return (
@@ -25,7 +27,7 @@ async function DashboardContent() {
         id="contenido"
         className="mx-auto w-full max-w-3xl px-4 pb-12 sm:px-6"
       >
-        <Welcome name={homeData.user.name} />
+        <Welcome name={firstName} />
 
         <ServiceHero
           director={homeData.director}

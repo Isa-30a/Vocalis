@@ -21,18 +21,33 @@ function getEmailLocalPart(email?: string | null): string | null {
   return localPart || null;
 }
 
+function getIdentitySource(user: UserIdentity): string | null {
+  return user.name?.trim() || getEmailLocalPart(user.email);
+}
+
 export function getDisplayName(user: UserIdentity): string {
-  return user.name?.trim() || getEmailLocalPart(user.email) || FALLBACK_NAME;
+  return getIdentitySource(user) || FALLBACK_NAME;
+}
+
+export function getFirstName(user: UserIdentity): string {
+  const source = getIdentitySource(user);
+
+  if (!source) {
+    return FALLBACK_NAME;
+  }
+
+  return source.split(/\s+/)[0] || FALLBACK_NAME;
 }
 
 export function getInitials(user: UserIdentity): string {
-  const source = user.name?.trim() || getEmailLocalPart(user.email);
+  const source = getIdentitySource(user);
 
   if (!source) {
     return "?";
   }
 
-  const parts = source.split(/[\s._-]+/).filter(Boolean);
+  // Split on apostrophes too, so "O'Connor" yields "OC".
+  const parts = source.split(/[\s._'\u2018\u2019-]+/).filter(Boolean);
 
   if (parts.length === 0) {
     return "?";

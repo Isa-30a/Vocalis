@@ -1,24 +1,57 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { LogOut } from "lucide-react";
-import { signOut } from "@/auth";
+import { signOutUser } from "@/components/auth/actions";
 import {
   getDisplayName,
   getInitials,
   type UserProfile,
 } from "@/lib/user";
 
-async function signOutAction() {
-  "use server";
-
-  await signOut({ redirectTo: "/login" });
-}
-
 export function UserMenu({ user }: { user: UserProfile }) {
+  const detailsRef = useRef<HTMLDetailsElement>(null);
   const displayName = getDisplayName(user);
   const initials = getInitials(user);
 
+  useEffect(() => {
+    function closeOnOutsidePointer(event: PointerEvent) {
+      const details = detailsRef.current;
+
+      if (
+        !details?.open ||
+        !(event.target instanceof Node) ||
+        details.contains(event.target)
+      ) {
+        return;
+      }
+
+      details.open = false;
+    }
+
+    function closeOnEscape(event: KeyboardEvent) {
+      const details = detailsRef.current;
+
+      if (event.key !== "Escape" || !details?.open) {
+        return;
+      }
+
+      details.open = false;
+      details.querySelector<HTMLElement>("summary")?.focus();
+    }
+
+    document.addEventListener("pointerdown", closeOnOutsidePointer);
+    document.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.removeEventListener("pointerdown", closeOnOutsidePointer);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, []);
+
   return (
-    <details className="dropdown dropdown-end">
+    <details ref={detailsRef} className="dropdown dropdown-end">
       <summary
         aria-label={`Cuenta de ${displayName}`}
         className="flex cursor-pointer list-none items-center gap-2 rounded-full bg-base-200 py-1 pl-1 pr-1 transition hover:bg-base-300/60 sm:pr-3 [&::-webkit-details-marker]:hidden"
@@ -52,7 +85,7 @@ export function UserMenu({ user }: { user: UserProfile }) {
         </div>
 
         <form
-          action={signOutAction}
+          action={signOutUser}
           className="border-t border-base-300/70 pt-1"
         >
           <button
