@@ -1,8 +1,7 @@
 # Dashboard header user flow
 
-This feature replaces the mocked current user in the dashboard header with the
-authenticated Auth.js session user. The dashboard greeting uses the same user,
-showing only the first name.
+The dashboard header shows the signed-in user's avatar, name and account menu.
+The greeting reuses the same profile and shows only the first name.
 
 ## Sequence
 
@@ -10,52 +9,35 @@ showing only the first name.
 sequenceDiagram
     autonumber
     actor User
-    participant Browser
-    participant Proxy as Route protection
-    participant Page as Dashboard page
+    participant App as Vocalis
     participant Auth as Auth.js
-    participant Header as AppHeader / UserMenu
-    participant Action as Sign-out action
 
-    User->>Browser: Open /dashboard
-    Browser->>Proxy: GET /dashboard
-    Proxy->>Auth: auth()
+    User->>App: Open dashboard
+    App->>Auth: Verify session
 
     alt No session
-        Auth-->>Proxy: null
-        Proxy-->>Browser: Redirect to /login
-        Browser-->>User: Login page
-    else Valid session
-        Auth-->>Proxy: session
-        Proxy->>Page: Render dashboard
-        Page->>Auth: auth()
-        Auth-->>Page: session.user
-        Page->>Page: getFirstName(session.user)
-        Page->>Header: <AppHeader user={session.user} />
-        Header->>Header: getDisplayName(session.user)
-        Header->>Header: getInitials(session.user)
-        Header-->>Browser: Avatar, name and user menu
-        Page-->>Browser: "Hola, {firstName}"
+        Auth-->>App: Unauthenticated
+        App-->>User: Redirect to login
+    else Signed in
+        Auth-->>App: User profile
+        App-->>User: Dashboard with avatar, name and greeting
     end
 
-    User->>Header: Click the avatar
-    Header-->>User: Show name, email and sign-out action
-    User->>Header: Click outside or press Escape
-    Header-->>User: Close the menu
+    User->>App: Open account menu
+    App-->>User: Name, email and sign out
 
-    User->>Header: Click "Cerrar sesión"
-    Header->>Action: Submit sign-out form
-    Action->>Auth: signOut({ redirectTo: "/login" })
-    Auth-->>Browser: Clear the session and redirect
-    Browser-->>User: Login page
+    User->>App: Click outside or press Escape
+    App-->>User: Close menu
+
+    User->>App: Sign out
+    App->>Auth: Clear session
+    Auth-->>App: Session cleared
+    App-->>User: Redirect to login
 ```
 
-## Fallback rules
+## Behavior
 
-- `getDisplayName`: trimmed name, then the email local part, then `"Invitado"`.
-- `getFirstName`: first word of the display name for the greeting.
-- `getInitials`: initials derived from the name or email; apostrophes are treated
-  as separators, so `"O'Connor"` becomes `"OC"`.
-- `user.image` is rendered when present. The initials avatar is used otherwise.
-- The user menu closes on an outside pointer event or `Escape`. `Escape` returns
-  focus to the menu summary.
+- The header uses the authenticated user's name, email and avatar.
+- The greeting uses only the first name.
+- Missing names fall back to the email name; missing avatars fall back to initials.
+- Sign-out clears the session and returns to the login page.
