@@ -1,6 +1,6 @@
 import { songs } from "@features/canciones/data/mock-songs";
 import type { Song } from "@features/canciones/types";
-import { currentUser, members } from "@features/equipo/data/mock-members";
+import { members } from "@features/equipo/data/mock-members";
 import { nextRehearsal, setlists } from "@features/setlists/data/mock-setlists";
 
 const songById = new Map(songs.map((song) => [song.id, song]));
@@ -35,7 +35,6 @@ const totalDurationSeconds = setlistItems.reduce(
 );
 
 export const homeData = {
-  user: currentUser,
   director,
   members,
   setlistItems,

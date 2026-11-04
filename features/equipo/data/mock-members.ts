@@ -66,5 +66,3 @@ export const members: Member[] = [
     tone: "neutral",
   },
 ];
-
-export const currentUser = members[0];
