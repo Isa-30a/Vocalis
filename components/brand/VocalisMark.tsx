@@ -15,6 +15,7 @@ export function VocalisMark({
       aria-hidden="true"
       className={className}
       priority
+      unoptimized
     />
   );
 }
