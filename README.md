@@ -48,12 +48,26 @@ which sends unauthenticated visitors to `/login`.
 | `npm run build`       | Create a production build                       |
 | `npm start`           | Serve the production build                      |
 | `npm run lint`        | Run ESLint                                      |
+| `npm run build:vinext` | Build the Cloudflare Worker bundle             |
+| `npm run deploy:vinext` | Build and deploy the Cloudflare Worker        |
 | `npm run db:generate` | Generate Drizzle migrations from `db/schema.ts` |
 | `npm run db:migrate`  | Apply pending migrations to the SQLite database |
 | `npm run db:studio`   | Open Drizzle Studio                             |
 
 `npm run dev` and `npm start` apply pending migrations automatically through
 `predev`/`prestart`.
+
+## Deployment
+
+Cloudflare Workers Builds deploys through vinext, using `cloudflare.config.ts`
+as the source of truth:
+
+- Build: `npm run build:vinext`
+- Production deploy: `npx vinext-cloudflare deploy --skip-build`
+- Preview deploy: `npx vinext-cloudflare previews deploy`
+
+Do not add a Wrangler configuration file. The `previews` block it asks for is
+only needed by `wrangler preview`, which this project does not use.
 
 ## Authentication
 
