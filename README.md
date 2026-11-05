@@ -83,8 +83,7 @@ Tables:
 - `song_audio` — metadata for recordings. Files will live in R2 when uploads
   are implemented; the table is already in place.
 
-Rehearsals are intentionally not persisted yet. The dashboard rehearsal card is
-static UI data.
+Rehearsals are intentionally not persisted yet.
 
 ### Local database
 

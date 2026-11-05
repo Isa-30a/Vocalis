@@ -1,9 +1,8 @@
 import type { SongSummary } from "@features/canciones/types";
 import { getMembers } from "@features/equipo/queries";
-import { nextRehearsal } from "@features/equipo/data/rehearsal";
 import type { Member } from "@features/equipo/types";
 import { getCurrentSetlist } from "@features/setlists/queries";
-import type { Rehearsal, SetlistItem } from "@features/setlists/types";
+import type { SetlistItem } from "@features/setlists/types";
 
 export type HomeData = {
   director: Member | null;
@@ -14,7 +13,6 @@ export type HomeData = {
     serviceLabel: string;
   } | null;
   setlistItems: Array<SetlistItem & { song: SongSummary }>;
-  rehearsal: Rehearsal;
   invitePath: string;
   totalDurationSeconds: number;
 };
@@ -41,7 +39,6 @@ export async function getHomeData(): Promise<HomeData> {
         }
       : null,
     setlistItems,
-    rehearsal: nextRehearsal,
     invitePath: "/invitar/7f3k9",
     totalDurationSeconds: setlistItems.reduce(
       (total, item) => total + item.song.durationSeconds,

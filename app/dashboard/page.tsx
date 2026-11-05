@@ -44,7 +44,6 @@ async function DashboardContent() {
 
         <TeamCard
           members={homeData.members}
-          rehearsal={homeData.rehearsal}
           invitePath={homeData.invitePath}
         />
       </main>
