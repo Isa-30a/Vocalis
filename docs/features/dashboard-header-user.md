@@ -9,30 +9,31 @@ The greeting reuses the same profile and shows only the first name.
 sequenceDiagram
     autonumber
     actor User
-    participant App as Vocalis
-    participant Auth as Auth.js
+    participant Web as Web app
+    participant API as Backend
 
-    User->>App: Open dashboard
-    App->>Auth: Verify session
+    User->>Web: Open dashboard
+    Web->>API: Load dashboard
+    API->>API: Verify session
 
     alt No session
-        Auth-->>App: Unauthenticated
-        App-->>User: Redirect to login
+        API-->>Web: Unauthenticated
+        Web-->>User: Login page
     else Signed in
-        Auth-->>App: User profile
-        App-->>User: Dashboard with avatar, name and greeting
+        API-->>Web: User profile
+        Web-->>User: Dashboard with avatar, name and greeting
     end
 
-    User->>App: Open account menu
-    App-->>User: Name, email and sign out
+    User->>Web: Open account menu
+    Web-->>User: Name, email and sign out
 
-    User->>App: Click outside or press Escape
-    App-->>User: Close menu
+    User->>Web: Click outside or press Escape
+    Web-->>User: Close menu
 
-    User->>App: Sign out
-    App->>Auth: Clear session
-    Auth-->>App: Session cleared
-    App-->>User: Redirect to login
+    User->>Web: Sign out
+    Web->>API: Clear session
+    API-->>Web: Session cleared
+    Web-->>User: Login page
 ```
 
 ## Behavior
