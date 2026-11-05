@@ -20,6 +20,10 @@ export default defineConfig({
       ASSETS: bindings.assets(),
       IMAGES: bindings.images(),
       DB: bindings.d1(database),
+      AUTH_SECRET: bindings.secret(),
+      AUTH_GOOGLE_ID: bindings.secret(),
+      AUTH_GOOGLE_SECRET: bindings.secret(),
+      AUTH_URL: bindings.secret(),
     },
   }),
 });
