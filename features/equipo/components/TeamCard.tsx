@@ -1,19 +1,12 @@
 import type { Member } from "@features/equipo/types";
-import type { Rehearsal } from "@features/setlists/types";
 import { AvatarStack } from "@ui/AvatarStack";
-import { Calendar } from "lucide-react";
 
 type TeamCardProps = {
   members: Member[];
-  rehearsal: Rehearsal;
   invitePath: string;
 };
 
-export function TeamCard({
-  members,
-  rehearsal,
-  invitePath,
-}: TeamCardProps) {
+export function TeamCard({ members, invitePath }: TeamCardProps) {
   return (
     <section
       id="equipo"
@@ -40,28 +33,6 @@ export function TeamCard({
 
         <div className="mt-4">
           <AvatarStack members={members} max={5} />
-        </div>
-
-        <div className="mt-4 flex items-start gap-3 rounded-2xl bg-base-200/60 p-3.5">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-base-100 text-base-content/60">
-            <Calendar
-              className="h-4 w-4"
-              strokeWidth={1.75}
-              aria-hidden="true"
-            />
-          </span>
-          <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-base-content/50">
-              Próximo ensayo
-            </p>
-            <p className="mt-0.5 text-sm font-semibold">
-              {rehearsal.label}
-            </p>
-            <p className="mt-0.5 text-xs text-base-content/55">
-              {rehearsal.location} · {rehearsal.confirmed} de{" "}
-              {rehearsal.total} confirmados
-            </p>
-          </div>
         </div>
 
         <div className="mt-4 border-t border-dashed border-base-300 pt-4">
