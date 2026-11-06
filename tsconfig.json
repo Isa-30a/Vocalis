@@ -28,6 +28,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    ".cloudflare/types/**/*.d.ts",
+    "types/**/*.d.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
