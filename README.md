@@ -2,19 +2,21 @@
 
 La memoria musical de tu equipo de alabanza: tonos por director, versiones de casa y setlists para el próximo servicio.
 
-This repository currently contains the mobile-first dashboard and login flow. Dashboard content still comes from mock data in `features/*/data`; authentication and user persistence run on Auth.js with a local SQLite database.
+This repository contains the mobile-first dashboard and login flow. Songs,
+director keys, setlists and team members are stored in Cloudflare D1 and read
+through Drizzle ORM; authentication runs on Auth.js with Google OAuth.
 
 ## Stack
 
-- [Next.js 16](https://nextjs.org) (App Router, `proxy.ts` for route protection)
+- [Next.js 16](https://nextjs.org) (App Router) running on Cloudflare Workers via [vinext](https://vinext.dev)
 - React 19 + TypeScript
 - Tailwind CSS 4
 - [daisyUI 5](https://daisyui.com) with a custom `vocalis` theme
 - [Lucide](https://lucide.dev) icons
 - Geist and Quicksand via `next/font`
-- [Auth.js 5](https://authjs.dev) (Google OAuth + email magic links)
-- [Drizzle ORM](https://orm.drizzle.team) on SQLite via `better-sqlite3`
-- [Nodemailer](https://nodemailer.com) for magic-link email
+- [Auth.js 5](https://authjs.dev) (Google OAuth, JWT sessions)
+- [Drizzle ORM](https://orm.drizzle.team) on Cloudflare D1
+- [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview) for migrations
 
 ## Getting started
 
@@ -26,36 +28,127 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). It redirects to `/dashboard`,
-which sends unauthenticated visitors to `/login`.
+In a second terminal, create the local D1 schema and seed it:
+
+```bash
+npm run db:local
+```
+
+Open [http://localhost:3000](http://localhost:3000). Unauthenticated visitors
+are redirected to `/login`.
+
+`npm run dev` runs the app through the Cloudflare Vite plugin so D1 and other
+bindings are emulated locally. The old `npm run dev:next` script remains for
+UI-only work that does not touch the database.
 
 ## Routes
 
-| Route                   | Description                                  |
-| ----------------------- | -------------------------------------------- |
-| `/`                     | Redirects to `/dashboard`                    |
-| `/dashboard`            | Home dashboard, requires a session           |
-| `/login`                | Sign-in page (Google or email magic link)    |
-| `/login/verify-request` | "Check your email" confirmation              |
-| `/api/auth/*`           | Auth.js handlers                             |
-| `/api/me`               | Returns the current user, or `401`           |
+| Route           | Description                               |
+| --------------- | ----------------------------------------- |
+| `/`             | Redirects to `/dashboard`                 |
+| `/dashboard`    | Home dashboard, requires a session        |
+| `/login`        | Sign-in page (Google)                     |
+| `/api/auth/*`   | Auth.js handlers                          |
+| `/api/me`       | Returns the current user, or `401`        |
 
 ## Scripts
 
-| Command               | Description                                     |
-| --------------------- | ----------------------------------------------- |
-| `npm run dev`         | Start the dev server                            |
-| `npm run build`       | Create a production build                       |
-| `npm start`           | Serve the production build                      |
-| `npm run lint`        | Run ESLint                                      |
-| `npm run build:vinext` | Build the Cloudflare Worker bundle             |
-| `npm run deploy:vinext` | Build and deploy the Cloudflare Worker        |
-| `npm run db:generate` | Generate Drizzle migrations from `db/schema.ts` |
-| `npm run db:migrate`  | Apply pending migrations to the SQLite database |
-| `npm run db:studio`   | Open Drizzle Studio                             |
+| Command                  | Description                                              |
+| ------------------------ | -------------------------------------------------------- |
+| `npm run dev`            | Start the Cloudflare/Vite dev server on port 3000        |
+| `npm run build`          | Build the Cloudflare Worker bundle                       |
+| `npm run start`          | Preview the built Worker                                 |
+| `npm run lint`           | Run ESLint                                               |
+| `npm run typecheck`      | Generate route and binding types, then run `tsc`         |
+| `npm run db:generate`    | Generate a Drizzle migration from `db/schema.ts`         |
+| `npm run db:local`       | Apply migrations and the seed to the running local D1    |
+| `npm run db:seed:generate` | Regenerate `db/seed-data/*.sql` from the import and fixtures |
+| `npm run db:migrate`     | Apply migrations to the remote D1 (`D1_DATABASE_ID`)     |
+| `npm run db:seed`        | Seed the remote D1 (`D1_DATABASE_ID`)                    |
+| `npm run deploy:vinext`  | Build and deploy the Cloudflare Worker                   |
 
-`npm run dev` and `npm start` apply pending migrations automatically through
-`predev`/`prestart`.
+## Database
+
+The schema lives in `db/schema.ts` and generated migrations are committed under
+`drizzle/`. The connection is created lazily in `db/index.ts` from the `DB` D1
+binding declared in `cloudflare.config.ts`.
+
+Tables:
+
+- `members` — directors, musicians and singers. A director is a member with
+  `role = 'director'`.
+- `songs` — catalog with the original key and duration.
+- `song_director_keys` — the key each director uses for a song.
+- `setlists` and `setlist_items` — service order with the key chosen for it.
+- `song_audio` — metadata for recordings. Files will live in R2 when uploads
+  are implemented; the table is already in place.
+
+Rehearsals are intentionally not persisted yet.
+
+### Local database
+
+D1 is emulated by the Cloudflare Vite plugin and persists under
+`.cloudflare/state`. With `npm run dev` running, apply the schema and seed:
+
+```bash
+npm run db:local
+```
+
+The script finds the running dev server, reads the local `DB` binding, applies
+any unapplied file in `drizzle/`, records them in `d1_migrations`, and then
+loads the generated SQL parts in `db/seed-data/`. It is safe to run again.
+
+### Remote database
+
+Create the D1 database once and note its UUID:
+
+```bash
+cf d1 create --name vocalis
+```
+
+Set `D1_DATABASE_ID` in your shell to apply the schema and seed, and keep it in
+the Cloudflare Workers Builds environment so the deploy binds the same database:
+
+```bash
+export D1_DATABASE_ID=<database-uuid>
+npm run db:migrate
+npm run db:seed
+```
+
+### Changing the schema
+
+```bash
+npm run db:generate
+npm run db:local
+```
+
+`db/seed-data/` is generated, not edited by hand. It is built from
+`songs-import.json`, including the directors it references:
+
+```bash
+npm run db:seed:generate
+```
+
+Imports use `ON CONFLICT DO NOTHING`, so re-running the seed adds new rows
+without overwriting edits made in the app. `db/seed-report.json` records the
+import warnings (missing artists, missing keys, lost minor modes and zero
+durations) for later cleanup.
+
+## Authentication
+
+Sign-in uses Google OAuth through Auth.js. Sessions are signed JWT cookies; no
+Auth.js user records are persisted in D1 yet.
+
+Create `.env.local` with:
+
+```bash
+AUTH_SECRET=            # openssl rand -base64 32
+NEXTAUTH_URL=http://localhost:3000
+AUTH_GOOGLE_ID=
+AUTH_GOOGLE_SECRET=
+```
+
+Google OAuth redirect URI: `http://localhost:3000/api/auth/callback/google`.
 
 ## Deployment
 
@@ -69,50 +162,7 @@ as the source of truth:
 Do not add a Wrangler configuration file. The `previews` block it asks for is
 only needed by `wrangler preview`, which this project does not use.
 
-## Authentication
-
-Sign-in supports Google OAuth and email magic links (Auth.js + Drizzle on SQLite).
-
-Create `.env.local` with:
-
-```bash
-AUTH_SECRET=            # openssl rand -base64 32
-NEXTAUTH_URL=http://localhost:3000
-AUTH_GOOGLE_ID=
-AUTH_GOOGLE_SECRET=
-
-# SQLite file used by Auth.js (defaults to ./data/vocalis.db)
-DATABASE_PATH=./data/vocalis.db
-
-# SMTP server for magic links. When omitted, the link is printed to the
-# server console instead of being sent, so the flow still works locally.
-EMAIL_SERVER=smtp://user:password@smtp.example.com:587
-EMAIL_FROM="Vocalis <no-reply@example.com>"
-```
-
-Google OAuth redirect URI: `http://localhost:3000/api/auth/callback/google`.
-
-The Google button is hidden behind a toast in production until the OAuth
-consent screen domain is verified. Set `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED=true`
-to re-enable it.
-
-Sessions are stored in a signed JWT cookie, while users, linked accounts and
-verification tokens are persisted in SQLite.
-
-## Database
-
-The schema lives in `db/schema.ts`; the connection is created in `db/index.ts`
-and enables WAL mode and foreign keys. Generated migrations are committed under
-`drizzle/`.
-
-After changing the schema:
-
-```bash
-npm run db:generate
-npm run db:migrate
-```
-
-Local database files (`data/*.db`, `data/*.db-*`) are gitignored.
+Apply migrations before the first deploy that depends on a schema change.
 
 ## Structure
 
@@ -120,19 +170,20 @@ Local database files (`data/*.db`, `data/*.db-*`) are gitignored.
 app/                 Routes, layout, metadata and global theme
   api/auth/          Auth.js route handlers
   api/me/            Current-user endpoint
-  dashboard/         Authenticated home dashboard
-  login/             Sign-in and verify-request pages
+  dashboard/         Authenticated dashboard
+  login/             Sign-in page
 components/          Brand, auth, layout and shared UI components
-features/            Home, songs, team and setlist code (with mock data)
-db/                  Drizzle schema and SQLite connection
+features/            Home, songs, team and setlist code and queries
+db/                  Drizzle schema, connection, seed builder and local setup
 drizzle/             Generated migrations and metadata
-lib/                 Email delivery for magic links
+types/               Local declarations for Cloudflare runtime modules
 assets/              Vocalis brand assets
 auth.ts              Auth.js configuration
-proxy.ts             Route protection for /dashboard and /profile
+middleware.ts        Route protection for /dashboard and /profile
+cloudflare.config.ts Worker name, entrypoint and bindings (including D1)
+vite.config.ts       Vite/vinext plugin setup
 ```
 
 Brand colors and typography live in `app/globals.css`. Import aliases are
 defined in `tsconfig.json`: `@/*` for the project root, `@features/*` for
-`features/*` and `@ui/*` for `components/ui/*`. Dashboard data is mocked in
-`features/*/data`.
+`features/*` and `@ui/*` for `components/ui/*`.

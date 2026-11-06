@@ -1,5 +1,10 @@
 import { bindings, defineConfig, defineWorker } from "cf/config";
 
+const databaseId = process.env.D1_DATABASE_ID;
+const database = databaseId
+  ? { name: "vocalis", id: databaseId }
+  : { name: "vocalis" };
+
 export default defineConfig({
   worker: defineWorker({
     name: "vocalis",
@@ -14,6 +19,11 @@ export default defineConfig({
     env: {
       ASSETS: bindings.assets(),
       IMAGES: bindings.images(),
+      DB: bindings.d1(database),
+      AUTH_SECRET: bindings.secret(),
+      AUTH_GOOGLE_ID: bindings.secret(),
+      AUTH_GOOGLE_SECRET: bindings.secret(),
+      AUTH_URL: bindings.secret(),
     },
   }),
 });
