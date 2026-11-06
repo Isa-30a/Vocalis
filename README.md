@@ -122,8 +122,8 @@ npm run db:generate
 npm run db:local
 ```
 
-`db/seed-data/` is generated, not edited by hand. It combines `songs-import.json`
-with the demo team and setlist fixtures:
+`db/seed-data/` is generated, not edited by hand. It is built from
+`songs-import.json`, including the directors it references:
 
 ```bash
 npm run db:seed:generate

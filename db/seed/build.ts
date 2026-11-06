@@ -38,7 +38,14 @@ type SeedMember = {
   initials: string;
   role: "director" | "musico" | "corista";
   roleLabel: string;
-  tone: "primary" | "secondary" | "accent" | "neutral" | "info" | "success" | "warning";
+  tone:
+    | "primary"
+    | "secondary"
+    | "accent"
+    | "neutral"
+    | "info"
+    | "success"
+    | "warning";
 };
 
 type ImportSong = {
@@ -65,100 +72,15 @@ const importFile = JSON.parse(
   readFileSync(join(root, "songs-import.json"), "utf8"),
 ) as ImportFile;
 
-const fixtureMembers: SeedMember[] = [
-  { id: "isa", name: "Isa", initials: "IM", role: "musico", roleLabel: "Músico", tone: "primary" },
-  { id: "ana", name: "Ana Torres", initials: "AT", role: "director", roleLabel: "Directora", tone: "primary" },
-  { id: "luis", name: "Luis Mendoza", initials: "LM", role: "director", roleLabel: "Director", tone: "secondary" },
-  { id: "sofia", name: "Sofía Ríos", initials: "SR", role: "director", roleLabel: "Directora", tone: "accent" },
-  { id: "mateo", name: "Mateo Silva", initials: "MS", role: "musico", roleLabel: "Músico", tone: "info" },
-  { id: "carla", name: "Carla Vega", initials: "CV", role: "corista", roleLabel: "Corista", tone: "success" },
-  { id: "david", name: "David León", initials: "DL", role: "musico", roleLabel: "Músico", tone: "warning" },
-  { id: "elena", name: "Elena Paz", initials: "EP", role: "corista", roleLabel: "Corista", tone: "neutral" },
-];
-
-const fixtureSongs: SeedSong[] = [
-  {
-    id: "grande-es-tu-amor",
-    title: "Grande es tu amor",
-    artist: "Marcos Witt",
-    originalKey: { note: "Sol", symbol: "G", mode: "major" },
-    durationSeconds: 270,
-    hasHomeVersion: true,
-    directorKeys: [
-      { directorId: "ana", key: { note: "Sol", symbol: "G" }, context: "banda" },
-      { directorId: "luis", key: { note: "La", symbol: "A" }, context: "acústico" },
-      { directorId: "sofia", key: { note: "Fa", symbol: "F" }, context: "banda" },
-    ],
-  },
-  {
-    id: "tu-fidelidad",
-    title: "Tu fidelidad",
-    artist: "Christine D'Clario",
-    originalKey: { note: "Do", symbol: "C", mode: "major" },
-    durationSeconds: 310,
-    hasHomeVersion: false,
-    directorKeys: [
-      { directorId: "ana", key: { note: "Do", symbol: "C" }, context: "banda" },
-      { directorId: "luis", key: { note: "Re", symbol: "D" }, context: "banda" },
-      { directorId: "sofia", key: { note: "Do", symbol: "C" }, context: "acústico" },
-    ],
-  },
-  {
-    id: "nadie-como-tu",
-    title: "Nadie como tú",
-    artist: "Un Corazón",
-    originalKey: { note: "Re", symbol: "D", mode: "major" },
-    durationSeconds: 245,
-    hasHomeVersion: true,
-    directorKeys: [
-      { directorId: "ana", key: { note: "Re", symbol: "D" }, context: "banda" },
-      { directorId: "luis", key: { note: "Mi", symbol: "E" }, context: "banda" },
-      { directorId: "sofia", key: { note: "Re", symbol: "D" }, context: "acústico" },
-    ],
-  },
-  {
-    id: "santo-es-el-senor",
-    title: "Santo es el Señor",
-    artist: "Marcos Brunet",
-    originalKey: { note: "La", symbol: "A", mode: "major" },
-    durationSeconds: 380,
-    hasHomeVersion: false,
-    directorKeys: [
-      { directorId: "ana", key: { note: "La", symbol: "A" }, context: "banda" },
-      { directorId: "luis", key: { note: "Sol", symbol: "G" }, context: "acústico" },
-      { directorId: "sofia", key: { note: "La", symbol: "A" }, context: "banda" },
-    ],
-  },
-  {
-    id: "tu-amor-no-falla",
-    title: "Tu amor no falla",
-    artist: "Bethel Music",
-    originalKey: { note: "Mi", symbol: "E", mode: "major" },
-    durationSeconds: 335,
-    hasHomeVersion: true,
-    directorKeys: [
-      { directorId: "ana", key: { note: "Mi", symbol: "E" }, context: "banda" },
-      { directorId: "luis", key: { note: "Re", symbol: "D" }, context: "banda" },
-      { directorId: "sofia", key: { note: "Mi", symbol: "E" }, context: "acústico" },
-    ],
-  },
-];
-
-const defaultSetlist = {
-  id: "domingo",
-  title: "Setlist de este domingo",
-  serviceLabel: "Domingo · 10:00",
-  directorId: "ana",
-  items: [
-    { position: 1, songId: "grande-es-tu-amor", directorId: "ana", key: { note: "Sol", symbol: "G", mode: "major" } },
-    { position: 2, songId: "tu-fidelidad", directorId: "ana", key: { note: "Do", symbol: "C", mode: "major" } },
-    { position: 3, songId: "nadie-como-tu", directorId: "ana", key: { note: "Re", symbol: "D", mode: "major" } },
-    { position: 4, songId: "santo-es-el-senor", directorId: "ana", key: { note: "La", symbol: "A", mode: "major" } },
-    { position: 5, songId: "tu-amor-no-falla", directorId: "ana", key: { note: "Mi", symbol: "E", mode: "major" } },
-  ],
-} as const;
-
-const tones = ["primary", "secondary", "accent", "info", "success", "warning", "neutral"] as const;
+const tones = [
+  "primary",
+  "secondary",
+  "accent",
+  "info",
+  "success",
+  "warning",
+  "neutral",
+] as const;
 
 const stripDiacritics = (value: string) =>
   value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -184,7 +106,7 @@ function getInitials(name: string): string {
   return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
 }
 
-const members = [...fixtureMembers];
+const members: SeedMember[] = [];
 const usedMemberIds = new Set(members.map((member) => member.id));
 const memberIdByName = new Map(
   members.map((member) => [member.name.toLowerCase(), member.id]),
@@ -230,10 +152,6 @@ for (const name of importDirectorNames) {
 
 const songsById = new Map<string, SeedSong>();
 
-for (const song of fixtureSongs) {
-  songsById.set(song.id, song);
-}
-
 for (const song of importFile.songs) {
   const directorKeys = new Map<string, SeedDirectorKey>();
 
@@ -269,18 +187,13 @@ for (const song of importFile.songs) {
 const songs = [...songsById.values()].sort((a, b) => a.id.localeCompare(b.id));
 const sortedMembers = [...members].sort((a, b) => a.id.localeCompare(b.id));
 
-for (const item of defaultSetlist.items) {
-  if (!songsById.has(item.songId)) {
-    throw new Error(`Setlist song "${item.songId}" is not seeded`);
-  }
-}
-
 const quote = (value: string | null | undefined): string =>
   value === null || value === undefined
     ? "NULL"
     : `'${String(value).replace(/'/g, "''")}'`;
 
-const number = (value: number): string => String(Math.max(0, Math.trunc(value)));
+const number = (value: number): string =>
+  String(Math.max(0, Math.trunc(value)));
 const boolean = (value: boolean): string => (value ? "1" : "0");
 const timestamp = "(unixepoch() * 1000)";
 
@@ -307,16 +220,6 @@ for (const song of songs) {
       `INSERT INTO song_director_keys (song_id, director_id, key_note, key_symbol, key_mode, context) VALUES (${quote(song.id)}, ${quote(directorKey.directorId)}, ${quote(directorKey.key.note)}, ${quote(directorKey.key.symbol)}, ${quote(directorKey.key.mode ?? "major")}, ${quote(directorKey.context ?? null)}) ON CONFLICT(song_id, director_id) DO NOTHING;`,
     );
   }
-}
-
-statements.push(
-  `INSERT INTO setlists (id, title, service_label, director_id, created_at) VALUES (${quote(defaultSetlist.id)}, ${quote(defaultSetlist.title)}, ${quote(defaultSetlist.serviceLabel)}, ${quote(defaultSetlist.directorId)}, ${timestamp}) ON CONFLICT(id) DO NOTHING;`,
-);
-
-for (const item of defaultSetlist.items) {
-  statements.push(
-    `INSERT INTO setlist_items (setlist_id, position, song_id, director_id, key_note, key_symbol, key_mode) VALUES (${quote(defaultSetlist.id)}, ${number(item.position)}, ${quote(item.songId)}, ${quote(item.directorId)}, ${quote(item.key.note)}, ${quote(item.key.symbol)}, ${quote(item.key.mode)}) ON CONFLICT(setlist_id, position) DO NOTHING;`,
-  );
 }
 
 const MAX_PART_BYTES = 60_000;
@@ -377,8 +280,6 @@ writeFileSync(
         members: sortedMembers.length,
         songs: songs.length,
         directorKeys: directorKeyCount,
-        setlists: 1,
-        setlistItems: defaultSetlist.items.length,
       },
       importedDirectors: importDirectorNames.map((name) => ({
         name,
@@ -392,5 +293,5 @@ writeFileSync(
 );
 
 console.log(
-  `Seeded ${sortedMembers.length} members, ${songs.length} songs, ${directorKeyCount} director keys and ${defaultSetlist.items.length} setlist items in ${parts.length} SQL part(s).`,
+  `Seeded ${sortedMembers.length} members, ${songs.length} songs, ${directorKeyCount} director keys .`,
 );

@@ -1,10 +1,8 @@
 {
   "counts": {
-    "members": 13,
-    "songs": 132,
-    "directorKeys": 216,
-    "setlists": 1,
-    "setlistItems": 5
+    "members": 5,
+    "songs": 127,
+    "directorKeys": 201
   },
   "importedDirectors": [
     {
