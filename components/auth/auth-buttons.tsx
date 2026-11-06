@@ -1,4 +1,3 @@
-import { LogOut } from "lucide-react";
 import { signIn, signOut, auth } from "@/auth";
 
 export default async function AuthButtons() {
