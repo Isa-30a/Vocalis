@@ -1,9 +1,9 @@
-import type { Song } from "@features/canciones/types";
+import type { SongSummary } from "@features/canciones/types";
 import type { SetlistItem } from "@features/setlists/types";
 import { KeyBadge } from "@ui/KeyBadge";
 
 type SetlistCardProps = {
-  items: Array<SetlistItem & { song: Song }>;
+  items: Array<SetlistItem & { song: SongSummary }>;
   totalMinutes: string;
 };
 
