@@ -32,13 +32,23 @@ jobs:
             exit 1
           fi
 
-          token=$(curl -sSf https://opencode.ai/console/auth/oauth/token \
+          response=$(curl -sS -w '\n%{http_code}' https://opencode.ai/console/auth/oauth/token \
             -d grant_type=urn:ietf:params:oauth:grant-type:token-exchange \
             -d subject_token_type=urn:ietf:params:oauth:token-type:jwt \
             -d client_id="$OPENCODE_CLIENT_ID" \
-            -d subject_token="$oidc" | jq -r .access_token)
-          if [ -z "$token" ] || [ "$token" = "null" ]; then
-            echo "::error::OpenCode token exchange failed."
+            -d subject_token="$oidc")
+          status=${response##*$'\n'}
+          body=${response%$'\n'*}
+          if [ "$status" != "200" ]; then
+            echo "::error::OpenCode token exchange failed with HTTP $status"
+            echo "$body" | head -c 2000
+            exit 1
+          fi
+
+          token=$(echo "$body" | jq -r '.access_token // empty')
+          if [ -z "$token" ]; then
+            echo "::error::OpenCode token exchange response did not include an access_token."
+            echo "$body" | head -c 2000
             exit 1
           fi
 
