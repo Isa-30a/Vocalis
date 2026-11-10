@@ -13,10 +13,3 @@ export type Setlist = {
   directorId: string;
   items: SetlistItem[];
 };
-
-export type Rehearsal = {
-  label: string;
-  location: string;
-  confirmed: number;
-  total: number;
-};

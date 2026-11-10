@@ -11,8 +11,10 @@ import { GoogleMark } from "@/components/auth/GoogleMark";
 import { LoginForm } from "@/components/auth/LoginForm";
 import { VocalisMark } from "@/components/brand/VocalisMark";
 import { VocalisWordmark } from "@/components/brand/VocalisWordmark";
-import { homeData } from "@features/inicio/data/home";
+import { getHomeData } from "@features/inicio/data/home";
 import { formatTotalMinutes } from "@features/setlists/utils";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Iniciar sesión — Vocalis",
@@ -52,7 +54,8 @@ function LoginFormFallback() {
   );
 }
 
-export default function LoginPage() {
+export default async function LoginPage() {
+  const homeData = await getHomeData();
   const totalMinutes = formatTotalMinutes(homeData.totalDurationSeconds);
   const previewItems = homeData.setlistItems.slice(0, 3);
 
@@ -156,10 +159,10 @@ export default function LoginPage() {
           >
             <div className="flex items-center justify-between gap-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-neutral-content/50">
               <span>Próximo servicio</span>
-              <span>Domingo · 10:00</span>
+              <span>{homeData.setlist?.serviceLabel ?? "Sin programar"}</span>
             </div>
             <p className="mt-2 font-display text-lg font-semibold">
-              Setlist de este domingo
+              {homeData.setlist?.title ?? "Setlist de este domingo"}
             </p>
             <ul className="mt-3 space-y-2">
               {previewItems.map((item, index) => (
