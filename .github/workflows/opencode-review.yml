@@ -1,0 +1,99 @@
+name: OpenCode review
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: opencode-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    # OIDC tokens are available to fork PRs, so only review branches in this repo.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Sign in to OpenCode
+        env:
+          AUDIENCE: https://opencode.ai/console
+          OPENCODE_CLIENT_ID: ${{ secrets.OPENCODE_CLIENT_ID }}
+        run: |
+          oidc=$(curl -sSf --oauth2-bearer "$ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=$AUDIENCE" | jq -r .value)
+          if [ -z "$oidc" ] || [ "$oidc" = "null" ]; then
+            echo "::error::Could not obtain a GitHub OIDC token."
+            exit 1
+          fi
+
+          response=$(curl -sS -w '\n%{http_code}' https://opencode.ai/console/auth/oauth/token \
+            -d grant_type=urn:ietf:params:oauth:grant-type:token-exchange \
+            -d subject_token_type=urn:ietf:params:oauth:token-type:jwt \
+            -d client_id="$OPENCODE_CLIENT_ID" \
+            -d subject_token="$oidc")
+          status=${response##*$'\n'}
+          body=${response%$'\n'*}
+          if [ "$status" != "200" ]; then
+            echo "::error::OpenCode token exchange failed with HTTP $status"
+            echo "$body" | head -c 2000
+            exit 1
+          fi
+
+          token=$(echo "$body" | jq -r '.access_token // empty')
+          if [ -z "$token" ]; then
+            echo "::error::OpenCode token exchange response did not include an access_token."
+            echo "$body" | head -c 2000
+            exit 1
+          fi
+
+          echo "::add-mask::$token"
+          echo "OPENCODE_API_KEY=$token" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install OpenCode
+        run: npm install --global @opencode/cli
+
+      - name: Render review prompt
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          python3 .github/opencode/render-command.py \
+            .opencode/commands/review.md \
+            "${{ github.event.pull_request.number }}" > "$RUNNER_TEMP/prompt.md"
+
+      - name: Review PR
+        run: |
+          opencode run \
+            --standalone \
+            --auto \
+            --archived \
+            --format json \
+            --agent plan \
+            --model opencode-go/deepseek-v4.1-flash \
+            < "$RUNNER_TEMP/prompt.md" > "$RUNNER_TEMP/events.jsonl"
+
+          python3 .github/opencode/extract-review.py \
+            < "$RUNNER_TEMP/events.jsonl" > "$RUNNER_TEMP/review.md"
+
+      - name: Comment on PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [ -s "$RUNNER_TEMP/review.md" ]; then
+            gh pr comment "$PR_NUMBER" --body-file "$RUNNER_TEMP/review.md"
+          fi
