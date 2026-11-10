@@ -47,17 +47,16 @@ If a section above is truncated, read the remaining changed files directly.
 
 2. Find every AGENTS.md / CLAUDE.md that applies to the changed files (root, plus any in directories containing changed files). List paths only.
 
-3. Launch 4 subagents in parallel. Each returns issues with a description and the reason flagged (e.g. "AGENTS.md adherence", "bug"). Give each the PR title/description (if any) for author intent. Each must open every changed file in full at its current revision: a hunk shows three lines of context, the file shows what the change means. Reading the callers and callees a suspicion depends on is expected.
+3. Launch 2 subagents in parallel. Each returns issues with a description and the reason flagged (e.g. "AGENTS.md adherence", "bug"). Give each the PR title/description (if any) for author intent. Each must open every changed file in full at its current revision: a hunk shows three lines of context, the file shows what the change means. Reading the callers and callees a suspicion depends on is expected.
 
-   - Agents 1 + 2: AGENTS.md / CLAUDE.md compliance. Only rule files whose directory is a parent of the changed file apply. Quote the exact rule broken.
-   - Agent 3: Bugs. Logic that does not do what the surrounding code says; null, undefined, empty or out-of-range values at a point that does not handle them; races, unawaited promises, state written from two places, effects firing twice; forgotten edge cases (empty collections, first/last element, zero, negatives, time zones, a rejected request, offline); error paths that swallow or misreport a failure or leave the system half-changed; leaked listeners, timers, subscriptions, handles or connections; a change that contradicts its own tests, or a test that no longer proves what its name claims.
-   - Agent 4: Problems introduced by the change that cross a trust boundary: injection, missing authorization, secrets in code or logs, unsafe defaults. Only within the changed code.
+   - Agent 1: AGENTS.md / CLAUDE.md compliance. Only rule files whose directory is a parent of the changed file apply. Quote the exact rule broken.
+   - Agent 2: Bugs and trust-boundary problems. Logic that does not do what the surrounding code says; null, undefined, empty or out-of-range values at a point that does not handle them; races, unawaited promises, state written from two places, effects firing twice; forgotten edge cases (empty collections, first/last element, zero, negatives, time zones, a rejected request, offline); error paths that swallow or misreport a failure or leave the system half-changed; leaked listeners, timers, subscriptions, handles or connections; a change that contradicts its own tests, or a test that no longer proves what its name claims. Also flag problems introduced by the change that cross a trust boundary: injection, missing authorization, secrets in code or logs, unsafe defaults. Only within the changed code.
 
    **Proof rule:** every issue must name the concrete input or sequence of events that produces the wrong behavior. If you cannot name it, it is a question, not a finding: drop it.
 
    Do NOT flag code style or quality, naming, formatting, "consider extracting", things a linter or the compiler would say, or anything already raised in the existing PR comments above.
 
-4. For each issue, launch a validation subagent in parallel. Give it the PR title/description and the issue. It must confirm with high confidence that the issue is real (e.g. that a flagged undefined variable really is undefined, that the quoted rule is in scope and actually violated, that the stated input really produces the stated result).
+4. Launch one validation subagent with all issues. Give it the PR title/description and the issues. It must confirm with high confidence that each issue is real (e.g. that a flagged undefined variable really is undefined, that the quoted rule is in scope and actually violated, that the stated input really produces the stated result). If there are no issues, skip validation.
 
 5. Drop every issue that was not validated.
 
