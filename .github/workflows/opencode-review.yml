@@ -15,7 +15,7 @@ concurrency:
 jobs:
   review:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - name: Check for API key
         id: key
@@ -43,11 +43,20 @@ jobs:
         if: steps.key.outputs.available == 'true'
         run: npm install --global @opencode/cli
 
+      - name: Render review prompt
+        if: steps.key.outputs.available == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          python3 .github/opencode/render-command.py \
+            .opencode/commands/review.md \
+            "${{ github.event.pull_request.number }}" > prompt.md
+
       - name: Review PR
         if: steps.key.outputs.available == 'true'
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
-          BASE_REF: ${{ github.base_ref }}
         run: |
           opencode run \
             --standalone \
@@ -56,10 +65,10 @@ jobs:
             --format json \
             --agent plan \
             --model opencode-go/deepseek-v4.1-flash \
-            "You are reviewing pull request #${{ github.event.pull_request.number }}. Review the changes for bugs, security issues, missing tests, and unintended behavior changes. Use git diff origin/$BASE_REF...HEAD to inspect them, then read the full changed files for context. Report only actionable findings, most severe first, each with a file and line reference and a short explanation. Do not modify files. If there is nothing to flag, say so." \
-            > events.jsonl
+            < prompt.md > events.jsonl
 
-          jq -r 'select(.type == "text") | .part.text' events.jsonl > review.md
+          jq -rs 'map(select(.type == "text")) | group_by(.messageID) | last // [] | map(.part.text) | join("")' \
+            events.jsonl > review.md
 
       - name: Comment on PR
         if: steps.key.outputs.available == 'true'
