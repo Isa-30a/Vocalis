@@ -24,8 +24,11 @@ base_git_ref() {
     printf 'origin/%s\n' "$base"
   elif git rev-parse --verify --quiet "$base" >/dev/null; then
     printf '%s\n' "$base"
-  else
+  elif git rev-parse --verify --quiet origin/main >/dev/null; then
     printf 'origin/main\n'
+  else
+    echo "No base ref found: tried origin/$base, $base, and origin/main" >&2
+    return 1
   fi
 }
 
@@ -38,14 +41,21 @@ case "$command" in
     gh pr view "$number" --json number,title,state,isDraft,baseRefName,headRefName,body,comments
     ;;
   log)
-    git log --oneline "$(base_git_ref)..HEAD"
+    base=$(base_git_ref) || exit 1
+    git log --oneline "$base..HEAD"
     ;;
   files)
-    git diff --name-status "$(base_git_ref)...HEAD"
-    git status --porcelain | awk '$1 == "??" { print "??\t" substr($0, 4) }'
+    base=$(base_git_ref) || exit 1
+    {
+      git diff --name-status "$base...HEAD"
+      git diff --name-status
+      git diff --cached --name-status
+      git ls-files --others --exclude-standard | sed 's/^/??\t/'
+    } | sort -u
     ;;
   diff)
-    git diff "$(base_git_ref)...HEAD"
+    base=$(base_git_ref) || exit 1
+    git diff "$base...HEAD"
     git diff
     git diff --cached
     while IFS= read -r file; do

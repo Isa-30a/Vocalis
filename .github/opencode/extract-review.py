@@ -22,11 +22,12 @@ def main() -> int:
         if event.get("type") != "text":
             continue
 
-        message_id = event.get("messageID")
+        part = event.get("part", {})
+        message_id = part.get("messageID") or event.get("messageID")
         if message_id != last_message:
             last_message = message_id
             chunks = []
-        chunks.append(event.get("part", {}).get("text", ""))
+        chunks.append(part.get("text", ""))
 
     sys.stdout.write("".join(chunks))
     return 0
