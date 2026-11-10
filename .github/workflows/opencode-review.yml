@@ -84,10 +84,20 @@ jobs:
             --format json \
             --agent plan \
             --model opencode-go/deepseek-v4.1-flash \
-            < "$RUNNER_TEMP/prompt.md" > "$RUNNER_TEMP/events.jsonl"
+            < "$RUNNER_TEMP/prompt.md" \
+            > "$RUNNER_TEMP/events.jsonl" \
+            2> "$RUNNER_TEMP/opencode.err"
 
           python3 .github/opencode/extract-review.py \
             < "$RUNNER_TEMP/events.jsonl" > "$RUNNER_TEMP/review.md"
+
+      - name: Review diagnostics
+        if: failure()
+        run: |
+          echo "--- opencode stderr ---"
+          cat "$RUNNER_TEMP/opencode.err" 2>/dev/null || true
+          echo "--- last events ---"
+          tail -n 20 "$RUNNER_TEMP/events.jsonl" 2>/dev/null || true
 
       - name: Comment on PR
         env:
