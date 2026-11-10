@@ -1,0 +1,72 @@
+name: OpenCode review
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: opencode-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check for API key
+        id: key
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+        run: |
+          if [ -n "$OPENCODE_API_KEY" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::OPENCODE_API_KEY is not set; skipping the OpenCode review."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.key.outputs.available == 'true'
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        if: steps.key.outputs.available == 'true'
+        with:
+          node-version: 22
+
+      - name: Install OpenCode
+        if: steps.key.outputs.available == 'true'
+        run: npm install --global @opencode/cli
+
+      - name: Review PR
+        if: steps.key.outputs.available == 'true'
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          opencode run \
+            --standalone \
+            --auto \
+            --archived \
+            --format json \
+            --agent plan \
+            --model opencode-go/deepseek-v4.1-flash \
+            "You are reviewing pull request #${{ github.event.pull_request.number }}. Review the changes for bugs, security issues, missing tests, and unintended behavior changes. Use git diff origin/$BASE_REF...HEAD to inspect them, then read the full changed files for context. Report only actionable findings, most severe first, each with a file and line reference and a short explanation. Do not modify files. If there is nothing to flag, say so." \
+            > events.jsonl
+
+          jq -r 'select(.type == "text") | .part.text' events.jsonl > review.md
+
+      - name: Comment on PR
+        if: steps.key.outputs.available == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [ -s review.md ]; then
+            gh pr comment "$PR_NUMBER" --body-file review.md
+          fi
