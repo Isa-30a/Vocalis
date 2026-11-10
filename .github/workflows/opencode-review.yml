@@ -3,6 +3,7 @@ name: OpenCode review
 on:
   pull_request:
     types: [opened]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -10,16 +11,36 @@ permissions:
   id-token: write
 
 concurrency:
-  group: opencode-review-${{ github.event.pull_request.number }}
+  group: opencode-review-${{ github.event.pull_request.number || github.ref_name }}
   cancel-in-progress: true
 
 jobs:
   review:
     # OIDC tokens are available to fork PRs, so only review branches in this repo.
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT_PR_NUMBER: ${{ github.event.pull_request.number }}
+          EVENT_BASE_REF: ${{ github.base_ref }}
+        run: |
+          if [ -n "$EVENT_PR_NUMBER" ]; then
+            echo "PR_NUMBER=$EVENT_PR_NUMBER" >> "$GITHUB_ENV"
+            echo "BASE_REF=$EVENT_BASE_REF" >> "$GITHUB_ENV"
+          else
+            number=$(gh pr view --json number --jq .number)
+            base=$(gh pr view "$number" --json baseRefName --jq .baseRefName)
+            echo "PR_NUMBER=$number" >> "$GITHUB_ENV"
+            echo "BASE_REF=$base" >> "$GITHUB_ENV"
+          fi
+
       - name: Sign in to OpenCode
         env:
           AUDIENCE: https://opencode.ai/console
@@ -45,10 +66,6 @@ jobs:
           echo "::add-mask::$token"
           echo "OPENCODE_API_KEY=$token" >> "$GITHUB_ENV"
 
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -59,11 +76,10 @@ jobs:
       - name: Render review prompt
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_REF: ${{ github.base_ref }}
         run: |
           python3 .github/opencode/render-command.py \
             .opencode/commands/review.md \
-            "${{ github.event.pull_request.number }}" > "$RUNNER_TEMP/prompt.md"
+            "$PR_NUMBER" > "$RUNNER_TEMP/prompt.md"
 
       - name: Review PR
         run: |
@@ -82,7 +98,6 @@ jobs:
       - name: Comment on PR
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           if [ -s "$RUNNER_TEMP/review.md" ]; then
             gh pr comment "$PR_NUMBER" --body-file "$RUNNER_TEMP/review.md"
