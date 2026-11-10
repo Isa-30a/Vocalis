@@ -51,7 +51,7 @@ jobs:
         run: |
           python3 .github/opencode/render-command.py \
             .opencode/commands/review.md \
-            "${{ github.event.pull_request.number }}" > prompt.md
+            "${{ github.event.pull_request.number }}" > "$RUNNER_TEMP/prompt.md"
 
       - name: Review PR
         if: steps.key.outputs.available == 'true'
@@ -65,10 +65,10 @@ jobs:
             --format json \
             --agent plan \
             --model opencode-go/deepseek-v4.1-flash \
-            < prompt.md > events.jsonl
+            < "$RUNNER_TEMP/prompt.md" > "$RUNNER_TEMP/events.jsonl"
 
-          jq -rs 'map(select(.type == "text")) | group_by(.messageID) | last // [] | map(.part.text) | join("")' \
-            events.jsonl > review.md
+          python3 .github/opencode/extract-review.py \
+            < "$RUNNER_TEMP/events.jsonl" > "$RUNNER_TEMP/review.md"
 
       - name: Comment on PR
         if: steps.key.outputs.available == 'true'
@@ -76,6 +76,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          if [ -s review.md ]; then
-            gh pr comment "$PR_NUMBER" --body-file review.md
+          if [ -s "$RUNNER_TEMP/review.md" ]; then
+            gh pr comment "$PR_NUMBER" --body-file "$RUNNER_TEMP/review.md"
           fi

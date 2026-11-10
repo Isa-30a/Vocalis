@@ -18,25 +18,25 @@ CONTEXT
 PR title, description and existing comments (empty when reviewing the local branch):
 
 ```
-!`if [ -n "$1" ]; then "${REVIEW_CONTEXT_SCRIPT:-./.opencode/scripts/review-context.sh}" pr-meta $1; fi`
+!`if [ -n "$1" ]; then "${REVIEW_CONTEXT_SCRIPT:-$(git rev-parse --show-toplevel)/.opencode/scripts/review-context.sh}" pr-meta $1; fi`
 ```
 
 Commits (local branch only):
 
 ```
-!`if [ -z "$1" ]; then "${REVIEW_CONTEXT_SCRIPT:-./.opencode/scripts/review-context.sh}" log; fi`
+!`if [ -z "$1" ]; then "${REVIEW_CONTEXT_SCRIPT:-$(git rev-parse --show-toplevel)/.opencode/scripts/review-context.sh}" log; fi`
 ```
 
 Changed files:
 
 ```
-!`if [ -z "$1" ]; then "${REVIEW_CONTEXT_SCRIPT:-./.opencode/scripts/review-context.sh}" files; fi`
+!`if [ -z "$1" ]; then "${REVIEW_CONTEXT_SCRIPT:-$(git rev-parse --show-toplevel)/.opencode/scripts/review-context.sh}" files; fi`
 ```
 
 Diff:
 
 ```
-!`if [ -n "$1" ]; then "${REVIEW_CONTEXT_SCRIPT:-./.opencode/scripts/review-context.sh}" pr-diff $1; else "${REVIEW_CONTEXT_SCRIPT:-./.opencode/scripts/review-context.sh}" diff; fi`
+!`if [ -n "$1" ]; then "${REVIEW_CONTEXT_SCRIPT:-$(git rev-parse --show-toplevel)/.opencode/scripts/review-context.sh}" pr-diff $1; else "${REVIEW_CONTEXT_SCRIPT:-$(git rev-parse --show-toplevel)/.opencode/scripts/review-context.sh}" diff; fi`
 ```
 
 If a section above is truncated, read the remaining changed files directly.
