@@ -7,6 +7,7 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  id-token: write
 
 concurrency:
   group: opencode-review-${{ github.event.pull_request.number }}
@@ -14,37 +15,48 @@ concurrency:
 
 jobs:
   review:
+    # OIDC tokens are available to fork PRs, so only review branches in this repo.
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: Check for API key
-        id: key
+      - name: Sign in to OpenCode
         env:
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          AUDIENCE: https://opencode.ai/console
+          OPENCODE_CLIENT_ID: ${{ secrets.OPENCODE_CLIENT_ID }}
         run: |
-          if [ -n "$OPENCODE_API_KEY" ]; then
-            echo "available=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::OPENCODE_API_KEY is not set; skipping the OpenCode review."
+          oidc=$(curl -sSf --oauth2-bearer "$ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=$AUDIENCE" | jq -r .value)
+          if [ -z "$oidc" ] || [ "$oidc" = "null" ]; then
+            echo "::error::Could not obtain a GitHub OIDC token."
+            exit 1
           fi
 
+          token=$(curl -sSf https://opencode.ai/console/auth/oauth/token \
+            -d grant_type=urn:ietf:params:oauth:grant-type:token-exchange \
+            -d subject_token_type=urn:ietf:params:oauth:token-type:jwt \
+            -d client_id="$OPENCODE_CLIENT_ID" \
+            -d subject_token="$oidc" | jq -r .access_token)
+          if [ -z "$token" ] || [ "$token" = "null" ]; then
+            echo "::error::OpenCode token exchange failed."
+            exit 1
+          fi
+
+          echo "::add-mask::$token"
+          echo "OPENCODE_API_KEY=$token" >> "$GITHUB_ENV"
+
       - uses: actions/checkout@v4
-        if: steps.key.outputs.available == 'true'
         with:
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
-        if: steps.key.outputs.available == 'true'
         with:
           node-version: 22
 
       - name: Install OpenCode
-        if: steps.key.outputs.available == 'true'
         run: npm install --global @opencode/cli
 
       - name: Render review prompt
-        if: steps.key.outputs.available == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BASE_REF: ${{ github.base_ref }}
@@ -54,9 +66,6 @@ jobs:
             "${{ github.event.pull_request.number }}" > "$RUNNER_TEMP/prompt.md"
 
       - name: Review PR
-        if: steps.key.outputs.available == 'true'
-        env:
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         run: |
           opencode run \
             --standalone \
@@ -71,7 +80,6 @@ jobs:
             < "$RUNNER_TEMP/events.jsonl" > "$RUNNER_TEMP/review.md"
 
       - name: Comment on PR
-        if: steps.key.outputs.available == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
